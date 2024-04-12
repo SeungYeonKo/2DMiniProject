@@ -1,47 +1,76 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMoveAbility : MonoBehaviour
 {
+    private Rigidbody2D _rigidbody;
+    private Animator _animator;
+
+    // [ 체력 ]
+    public int Health;
+    public int MaxHealth = 10;
+
+    // [ 이동 ]
     public float Movespeed = 3.5f;
-    public float RunSpeed = 5.3f;         
-    public float jumpForce = 3f; 
-    private Rigidbody2D rb;
-    private bool isGrounded = true; 
+
+    // [ 점프 ]
+    public float JumpPower = 3f;
+    public float FallMultiplier = 2.5f;
+
+    private bool isGrounded = true;
+    private bool _isJump = false;
     private float moveInput; 
-    private bool jumpInput = false;
+    
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        moveInput = Input.GetAxis("Horizontal"); 
-        if (Input.GetKeyDown(KeyCode.Space))
+        moveInput = Input.GetAxis("Horizontal");
+        // 플레이어의 수평 이동 입력에 따라 애니메이션 상태를 변경
+        if (Mathf.Abs(moveInput) > 0.01f)  // 움직임이 감지되면
         {
-            jumpInput = true; 
+            _animator.SetBool("isRunning", true);
+        }
+        else  // 움직임이 없으면
+        {
+            _animator.SetBool("isRunning", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            _isJump = true;
         }
     }
 
     void FixedUpdate()
     {
-        Move(); 
-        if (jumpInput && isGrounded) 
+        Move();
+        if (_isJump)
         {
             Jump();
-            jumpInput = false; 
+            _isJump = false;
+        }
+
+        // 점프 하강 중 추가 중력 적용
+        if (_rigidbody.velocity.y < 0) // 하강 중일 때
+        {
+            _rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (FallMultiplier - 1) * Time.fixedDeltaTime;
         }
     }
 
     void Move()
     {
-        rb.velocity = new Vector2(moveInput * Movespeed, rb.velocity.y);
+        _rigidbody.velocity = new Vector2(moveInput * Movespeed, _rigidbody.velocity.y);
     }
 
     void Jump()
     {
-        rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0); // 점프 전 속도 초기화
+        _rigidbody.AddForce(new Vector2(0f, JumpPower), ForceMode2D.Impulse);
         isGrounded = false;
     }
 
