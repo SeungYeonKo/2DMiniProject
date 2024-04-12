@@ -19,8 +19,8 @@ public class PlayerMoveAbility : MonoBehaviour
 
     private bool isGrounded = true;
     private bool _isJump = false;
-    private float moveInput; 
-    
+    private float moveInput;
+
 
     void Start()
     {
@@ -76,18 +76,19 @@ public class PlayerMoveAbility : MonoBehaviour
         isGrounded = false;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Ground")
         {
             isGrounded = true;
         }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Item"))
+        if (collision.collider.tag == "Trap_Spike")
         {
-            gameObject.SetActive(false);
+            Debug.Log("체력 -1");
+            Health -= 1;
         }
     }
+
+ 
+
 }
