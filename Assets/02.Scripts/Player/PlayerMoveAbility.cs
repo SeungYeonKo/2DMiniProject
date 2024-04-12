@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMoveAbility : MonoBehaviour
@@ -79,6 +80,13 @@ public class PlayerMoveAbility : MonoBehaviour
         if (collision.collider.tag == "Ground")
         {
             isGrounded = true;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Item"))
+        {
+            gameObject.SetActive(false);
         }
     }
 }
