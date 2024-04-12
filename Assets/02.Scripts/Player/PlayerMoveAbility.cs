@@ -32,19 +32,14 @@ public class PlayerMoveAbility : MonoBehaviour
     void Update()
     {
         moveInput = Input.GetAxis("Horizontal");
-        // 플레이어의 수평 이동 입력에 따라 애니메이션 상태를 변경
-        if (Mathf.Abs(moveInput) > 0.01f)  // 움직임이 감지되면
-        {
-            _animator.SetBool("isRunning", true);
-        }
-        else  // 움직임이 없으면
-        {
-            _animator.SetBool("isRunning", false);
-        }
+
+        // Update the isRunning animation parameter
+        _animator.SetBool("isRunning", Mathf.Abs(moveInput) > 0.01f && isGrounded);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             _isJump = true;
+            _animator.SetTrigger("jump");
         }
     }
 
@@ -57,8 +52,7 @@ public class PlayerMoveAbility : MonoBehaviour
             _isJump = false;
         }
 
-        // 점프 하강 중 추가 중력 적용
-        if (_rigidbody.velocity.y < 0) // 하강 중일 때
+        if (_rigidbody.velocity.y < 0)
         {
             _rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (FallMultiplier - 1) * Time.fixedDeltaTime;
         }
