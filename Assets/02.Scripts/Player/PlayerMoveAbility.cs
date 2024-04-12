@@ -24,6 +24,7 @@ public class PlayerMoveAbility : MonoBehaviour
 
     void Start()
     {
+        Health = MaxHealth;
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }

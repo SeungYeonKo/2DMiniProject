@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - HealthItem
-  - AttackItem
+  - Item
+  - Trap_Spike
   layers:
   - Default
   - TransparentFX
