@@ -21,6 +21,8 @@ public class PlayerMoveAbility : MonoBehaviour
     private bool _isJump = false;
     private float moveInput;
 
+    // 원거리 공격 
+    public GameObject OrangePrefab;
 
     void Start()
     {
@@ -31,16 +33,24 @@ public class PlayerMoveAbility : MonoBehaviour
 
     void Update()
     {
+        // 이동
         moveInput = Input.GetAxis("Horizontal");
+        if(moveInput > 0.01f) // 오른쪽 이동  
+        {
+            transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+        }else if(moveInput < -0.01f) // 왼쪽 이동 
+        {
+            transform.localScale = new Vector3(-1.3f ,1.3f, 1.3f);
+        }
 
-        // Update the isRunning animation parameter
         _animator.SetBool("isRunning", Mathf.Abs(moveInput) > 0.01f && isGrounded);
 
+        // 점프 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             _isJump = true;
-            _animator.SetTrigger("jump");
         }
+        Attack();
     }
 
     void FixedUpdate()
@@ -70,6 +80,22 @@ public class PlayerMoveAbility : MonoBehaviour
         isGrounded = false;
     }
 
+    void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            GameObject orange = Instantiate(OrangePrefab, transform.position + new Vector3(1f, 0, 0), Quaternion.identity); // 오렌지 프리팹 생성 위치 조정
+            Rigidbody2D orangeRb = orange.GetComponent<Rigidbody2D>(); // 오렌지의 Rigidbody2D 가져오기
+            if (orangeRb != null)
+            {
+                float launchAngle = 45f; // 발사 각도 (도)
+                float launchPower = 5f; // 발사력
+                Vector2 launchDirection = new Vector2(Mathf.Cos(launchAngle * Mathf.Deg2Rad), Mathf.Sin(launchAngle * Mathf.Deg2Rad)); // 발사 방향 벡터 계산
+                orangeRb.AddForce(launchDirection * launchPower, ForceMode2D.Impulse); // 발사
+            }
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Ground")
@@ -81,8 +107,14 @@ public class PlayerMoveAbility : MonoBehaviour
             Debug.Log("체력 -1");
             Health -= 1;
         }
-    }
+        if(collision.collider.tag == "Item")
+        {
+            Debug.Log("아이템을 먹었다!!");
+            collision.gameObject.SetActive(false);
+        }
 
- 
+
+
+    }
 
 }
