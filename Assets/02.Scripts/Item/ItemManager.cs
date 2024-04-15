@@ -5,14 +5,15 @@ using UnityEngine.Events;
 
 public class ItemManager : MonoBehaviour
 {
-    public UnityEvent OnDataChanged;
     public static ItemManager Instance { get; private set; }
+    public UnityEvent OnItemChanged; // 아이템 변경 이벤트
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -26,20 +27,30 @@ public class ItemManager : MonoBehaviour
         ItemList.Add(new Item(ItemType.Attack, 0));
         ItemList.Add(new Item(ItemType.Key, 0));
 
-        OnDataChanged.Invoke();
+        OnItemChanged.Invoke();
     }
 
     // 1. 아이템 추가
     public void AddItem(ItemType itemType, int count)
     {
+        bool itemFound = false;
         foreach (var item in ItemList)
         {
             if (item.ItemType == itemType)
             {
                 item.Count += count;
-                OnDataChanged?.Invoke();
-                return; 
+                itemFound = true;
+                break; 
             }
+        }
+        if (itemFound)
+        {
+            Debug.Log("Item added and event triggered.");
+            OnItemChanged?.Invoke();
+        }
+        else
+        {
+            Debug.Log("Item type not found.");
         }
     }
     // 아이템 개수 조회

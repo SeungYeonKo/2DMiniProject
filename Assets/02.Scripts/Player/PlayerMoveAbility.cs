@@ -7,7 +7,6 @@ public class PlayerMoveAbility : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     private Animator _animator;
-    Item _item;
 
     // [ 체력 ]
     public int Health;
@@ -26,6 +25,9 @@ public class PlayerMoveAbility : MonoBehaviour
 
     // 원거리 공격 
     public GameObject OrangePrefab;
+
+    // 아이템
+    public int AttackItemCount;
 
     void Start()
     {
@@ -140,6 +142,12 @@ public class PlayerMoveAbility : MonoBehaviour
             this.gameObject.SetActive(false);
     }
 
+    public void AddAttackItem()
+    {
+        AttackItemCount+=1;  
+        FindObjectOfType<UI_PlayerStat>().UpdateAttackItemCount();  // UI 업데이트 호출
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.tag == "Ground" || other.collider.tag == "Trap_Spike")
@@ -157,9 +165,17 @@ public class PlayerMoveAbility : MonoBehaviour
             ItemObject itemObject = other.gameObject.GetComponent<ItemObject>();
             if (itemObject != null && itemObject.ItemType == ItemType.Health)
             {
-                Heal(1);  // 체력 아이템인 경우 체력을 1만큼 회복
-                Destroy(other.gameObject);  // 아이템 파괴
+                Heal(1); 
             }
+            if (itemObject != null && itemObject.ItemType == ItemType.Attack)
+            { 
+                AddAttackItem();
+            }
+                Destroy(other.gameObject); 
+        }
+        if(other.gameObject.CompareTag("EndPosition"))
+        {
+            Debug.Log("Stage1_Clear!!");
         }
     }
  }

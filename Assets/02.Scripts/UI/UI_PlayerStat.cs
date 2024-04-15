@@ -18,6 +18,14 @@ public class UI_PlayerStat : MonoBehaviour
         UpdateHealthDisplay();
     }
 
+    public void UpdateAttackItemCount()
+    {
+        if (playerMoveAbility != null)
+        {
+            AttackItemTextUI.text = $"X {playerMoveAbility.AttackItemCount}";  // 공격 아이템 카운트 업데이트
+        }
+    }
+
     public void UpdateHealthDisplay()
     {
         if (playerMoveAbility != null && HeartImages.Length == playerMoveAbility.MaxHealth)
@@ -28,12 +36,5 @@ public class UI_PlayerStat : MonoBehaviour
                 HeartImages[i].enabled = i < playerMoveAbility.Health;
             }
         }
-       
-    }
-
-    public void Refresh()
-    {
-        AttackItemTextUI.text = $"X {ItemManager.Instance.GetItemCount(ItemType.Attack)}";
-        KeyItemTextUI.text = $"{ItemManager.Instance.GetItemCount(ItemType.Key)}/2";
     }
 }

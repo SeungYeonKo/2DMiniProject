@@ -26,13 +26,14 @@ public class ItemObject : MonoBehaviour
         switch (ItemType)
         {
             case ItemType.Health:
-                player.Heal(1); // 체력 아이템의 경우, 체력을 1만큼 회복
+                player.Heal(1); 
                 break;
             case ItemType.Attack:
-                // 공격력 향상 로직이 필요하다면 여기에 추가
+                player.AddAttackItem();
+                Debug.Log("Attack아이템 한 개 추가");
                 break;
             case ItemType.Key:
-                // 키 아이템 로직이 필요하다면 여기에 추가
+             
                 break;
         }
     }
