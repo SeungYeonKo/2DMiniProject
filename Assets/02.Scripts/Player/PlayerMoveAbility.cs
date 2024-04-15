@@ -93,28 +93,35 @@ public class PlayerMoveAbility : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            // 플레이어의 방향에 따라 발사체의 초기 위치 조정
-            Vector3 projectilePosition = transform.position + new Vector3(1f * Mathf.Sign(transform.localScale.x), 0, 0);
-
-            // 플레이어가 왼쪽을 바라보고 있을 때는 발사 각도와 방향을 반대
-            float launchAngle = 45f;
-            if (transform.localScale.x < 0) // 플레이어가 왼쪽을 바라볼 때
+            if (AttackItemCount > 0) // 공격 아이템이 있을 때만
             {
-                launchAngle = 135f; // 180 - 45 = 135, 오른쪽을 바라볼 때의 각도를 왼쪽으로 반전
-            }
+                // 플레이어의 방향에 따라 발사체의 초기 위치 조정
+                Vector3 projectilePosition = transform.position + new Vector3(1f * Mathf.Sign(transform.localScale.x), 0, 0);
 
-            GameObject orange = Instantiate(OrangePrefab, projectilePosition, Quaternion.identity);
-            Rigidbody2D orangeRb = orange.GetComponent<Rigidbody2D>();
-            if (orangeRb != null)
-            {
-                float launchPower = 5f;
-                Vector2 launchDirection = new Vector2(Mathf.Cos(launchAngle * Mathf.Deg2Rad), Mathf.Sin(launchAngle * Mathf.Deg2Rad));
-                orangeRb.AddForce(launchDirection * launchPower, ForceMode2D.Impulse);
+                // 플레이어가 왼쪽을 바라보고 있을 때는 발사 각도와 방향을 반대
+                float launchAngle = 45f;
+                if (transform.localScale.x < 0) // 플레이어가 왼쪽을 바라볼 때
+                {
+                    launchAngle = 135f; // 180 - 45 = 135, 오른쪽을 바라볼 때의 각도를 왼쪽으로 반전
+                }
+
+                GameObject orange = Instantiate(OrangePrefab, projectilePosition, Quaternion.identity);
+                Rigidbody2D orangeRb = orange.GetComponent<Rigidbody2D>();
+                if (orangeRb != null)
+                {
+                    float launchPower = 5f;
+                    Vector2 launchDirection = new Vector2(Mathf.Cos(launchAngle * Mathf.Deg2Rad), Mathf.Sin(launchAngle * Mathf.Deg2Rad));
+                    orangeRb.AddForce(launchDirection * launchPower, ForceMode2D.Impulse);
+                }
+                // 오렌지 객체를 코루틴에 전달
+                StartCoroutine(OrangeDestroy(orange));
+
+                AttackItemCount -= 1; // 아이템 사용 후 개수 감소
+                FindObjectOfType<UI_PlayerStat>().UpdateAttackItemCount();  // UI 업데이트
             }
-            // 오렌지 객체를 코루틴에 전달
-            StartCoroutine(OrangeDestroy(orange));
         }
     }
+
     IEnumerator OrangeDestroy(GameObject orange)
     {
         yield return new WaitForSeconds(3f);
