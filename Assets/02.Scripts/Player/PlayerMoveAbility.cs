@@ -29,6 +29,9 @@ public class PlayerMoveAbility : MonoBehaviour
     // 아이템
     public int AttackItemCount;
 
+    // 이펙트
+    public GameObject PlayerDieEffect;
+
     void Start()
     {
         Health = MaxHealth;
@@ -58,6 +61,7 @@ public class PlayerMoveAbility : MonoBehaviour
         Attack();
         if(Health <=  0)
         {
+            
             Die();
         } 
     }
@@ -143,11 +147,23 @@ public class PlayerMoveAbility : MonoBehaviour
         }
     }
 
-
     void Die()
     {
-            this.gameObject.SetActive(false);
+        if (PlayerDieEffect != null) 
+        {
+            GameObject effect = Instantiate(PlayerDieEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1.3f);  
+        }
+        StartCoroutine(DeactivateAfterDelay()); 
     }
+
+    IEnumerator DeactivateAfterDelay()
+    {
+        yield return new WaitForSeconds(0.1f); 
+        this.gameObject.SetActive(false); 
+    }
+
+
 
     public void AddAttackItem()
     {
