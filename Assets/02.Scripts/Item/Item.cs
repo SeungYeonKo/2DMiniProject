@@ -2,13 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public enum ItemType
 {
-    public enum ItemType
-    {
-        Health,
-        Attack
-    }
+    Health,
+    Attack
+}
 
-    public ItemType Type; 
+public class Item:MonoBehaviour
+{
+    public ItemType ItemType;
+    public int Count;
+
+    public Item(ItemType itemType, int count)
+    {
+        ItemType = itemType;
+        Count = count;
+    }
 }

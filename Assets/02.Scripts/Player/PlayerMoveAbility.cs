@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using static Item;
 
 public class PlayerMoveAbility : MonoBehaviour
 {
@@ -112,9 +113,5 @@ public class PlayerMoveAbility : MonoBehaviour
             Debug.Log("아이템을 먹었다!!");
             collision.gameObject.SetActive(false);
         }
-
-
-
     }
-
 }
