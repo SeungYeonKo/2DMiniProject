@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using static Item;
@@ -90,15 +91,34 @@ public class PlayerMoveAbility : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            GameObject orange = Instantiate(OrangePrefab, transform.position + new Vector3(1f, 0, 0), Quaternion.identity); // 오렌지 프리팹 생성 위치 조정
-            Rigidbody2D orangeRb = orange.GetComponent<Rigidbody2D>(); // 오렌지의 Rigidbody2D 가져오기
+            // 플레이어의 방향에 따라 발사체의 초기 위치 조정
+            Vector3 projectilePosition = transform.position + new Vector3(1f * Mathf.Sign(transform.localScale.x), 0, 0);
+
+            // 플레이어가 왼쪽을 바라보고 있을 때는 발사 각도와 방향을 반대
+            float launchAngle = 45f;
+            if (transform.localScale.x < 0) // 플레이어가 왼쪽을 바라볼 때
+            {
+                launchAngle = 135f; // 180 - 45 = 135, 오른쪽을 바라볼 때의 각도를 왼쪽으로 반전
+            }
+
+            GameObject orange = Instantiate(OrangePrefab, projectilePosition, Quaternion.identity);
+            Rigidbody2D orangeRb = orange.GetComponent<Rigidbody2D>();
             if (orangeRb != null)
             {
-                float launchAngle = 45f; // 발사 각도 (도)
-                float launchPower = 5f; // 발사력
-                Vector2 launchDirection = new Vector2(Mathf.Cos(launchAngle * Mathf.Deg2Rad), Mathf.Sin(launchAngle * Mathf.Deg2Rad)); // 발사 방향 벡터 계산
-                orangeRb.AddForce(launchDirection * launchPower, ForceMode2D.Impulse); // 발사
+                float launchPower = 5f;
+                Vector2 launchDirection = new Vector2(Mathf.Cos(launchAngle * Mathf.Deg2Rad), Mathf.Sin(launchAngle * Mathf.Deg2Rad));
+                orangeRb.AddForce(launchDirection * launchPower, ForceMode2D.Impulse);
             }
+            // 오렌지 객체를 코루틴에 전달
+            StartCoroutine(OrangeDestroy(orange));
+        }
+    }
+    IEnumerator OrangeDestroy(GameObject orange)
+    {
+        yield return new WaitForSeconds(3f);
+        if (orange != null)
+        {
+           Destroy(orange); // 오렌지 객체를 파괴
         }
     }
 
@@ -107,22 +127,22 @@ public class PlayerMoveAbility : MonoBehaviour
             this.gameObject.SetActive(false);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.collider.tag == "Ground" || collision.collider.tag == "Trap_Spike")
+        if (other.collider.tag == "Ground" || other.collider.tag == "Trap_Spike")
         {
             isGrounded = true;
         }
-        if (collision.collider.tag == "Trap_Spike")
+        if (other.collider.tag == "Trap_Spike")
         {
             Debug.Log("체력 -1");
             Health -= 1;
             FindObjectOfType<UI_PlayerStat>().UpdateHealthDisplay();
         }
-        if(collision.collider.tag == "Item")
+        if(other.gameObject.CompareTag("Item"))
         {
-            Debug.Log("아이템을 먹었다!!");
-            collision.gameObject.SetActive(false);
+           
+                    Destroy(other.gameObject); // 아이템 게임 오브젝트 파괴
         }
     }
-}
+ }

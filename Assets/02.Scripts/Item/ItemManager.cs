@@ -20,6 +20,7 @@ public class ItemManager : MonoBehaviour
         }
     }
     public List<Item> ItemList = new List<Item>();
+
     private void Start()
     {
         ItemList.Add(new Item(ItemType.Attack, 0));

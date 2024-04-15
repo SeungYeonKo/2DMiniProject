@@ -1930,7 +1930,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1817335310023894016, guid: d504ce2ef603dd5479d6049aca11948f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4059,7 +4060,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1817335310023894016, guid: d504ce2ef603dd5479d6049aca11948f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5719,7 +5721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cf2587eb8b3724a8bb240c9f0e98c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UI_PlayerStat: {fileID: 984274930}
   Health: 0
   MaxHealth: 10
   Movespeed: 3.5
@@ -83882,7 +83883,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 9.327635
+      m_AnimationSpeed: 5.2624307
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -86787,7 +86788,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1817335310023894016, guid: d504ce2ef603dd5479d6049aca11948f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -86914,7 +86916,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthItem_Heart
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3837209509843149479, guid: 1500962e27ea4bc4aa5347f1330aefad, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
