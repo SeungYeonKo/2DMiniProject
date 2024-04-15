@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624207}
   - component: {fileID: 624209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (2)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8533232}
   - component: {fileID: 8533234}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (24)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69270085}
   - component: {fileID: 69270087}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (53)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -1032,7 +1032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197773469}
   - component: {fileID: 197773471}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (34)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 209777849}
   - component: {fileID: 209777851}
   - component: {fileID: 209777850}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (3)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -1532,7 +1532,7 @@ GameObject:
   - component: {fileID: 325569975}
   - component: {fileID: 325569977}
   - component: {fileID: 325569976}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (20)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -1796,7 +1796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383685065}
   - component: {fileID: 383685067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (16)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -1950,7 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442130602}
   - component: {fileID: 442130604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (19)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -2034,7 +2034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459368023}
   - component: {fileID: 459368025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (6)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -2118,7 +2118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461827426}
   - component: {fileID: 461827428}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (49)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -3093,7 +3093,7 @@ GameObject:
   - component: {fileID: 599127569}
   - component: {fileID: 599127571}
   - component: {fileID: 599127570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (8)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -3301,7 +3301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611973353}
   - component: {fileID: 611973355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (48)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -3386,7 +3386,7 @@ GameObject:
   - component: {fileID: 621800478}
   - component: {fileID: 621800480}
   - component: {fileID: 621800479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (11)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -3515,7 +3515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 625045551}
   - component: {fileID: 625045553}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (4)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -3719,7 +3719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654890234}
   - component: {fileID: 654890236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (22)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -3804,7 +3804,7 @@ GameObject:
   - component: {fileID: 676000196}
   - component: {fileID: 676000198}
   - component: {fileID: 676000197}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (15)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -3933,7 +3933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 683106220}
   - component: {fileID: 683106222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (51)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -4569,7 +4569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 929155023}
   - component: {fileID: 929155025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (25)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -4690,7 +4690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948329593}
   - component: {fileID: 948329595}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (13)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -4912,7 +4912,7 @@ GameObject:
   - component: {fileID: 999571909}
   - component: {fileID: 999571911}
   - component: {fileID: 999571910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (31)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -5446,7 +5446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1131529959}
   - component: {fileID: 1131529961}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (21)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -5719,6 +5719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cf2587eb8b3724a8bb240c9f0e98c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI_PlayerStat: {fileID: 984274930}
   Health: 0
   MaxHealth: 10
   Movespeed: 3.5
@@ -5876,7 +5877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1218183354}
   - component: {fileID: 1218183356}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (55)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -6067,7 +6068,7 @@ GameObject:
   - component: {fileID: 1248757913}
   - component: {fileID: 1248757915}
   - component: {fileID: 1248757914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (23)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -6196,7 +6197,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1317188727}
   - component: {fileID: 1317188729}
-  m_Layer: 0
+  - component: {fileID: 1317188730}
+  m_Layer: 6
   m_Name: Spike (45)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -6270,6 +6272,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1317188730
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317188726}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.3434906, y: -0.29030275}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.6869812, y: 0.4193945}
+  m_EdgeRadius: 0
 --- !u!1 &1352651934
 GameObject:
   m_ObjectHideFlags: 0
@@ -6280,7 +6327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1352651935}
   - component: {fileID: 1352651937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (40)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -6365,7 +6412,7 @@ GameObject:
   - component: {fileID: 1353467259}
   - component: {fileID: 1353467261}
   - component: {fileID: 1353467260}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (39)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -6494,7 +6541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1361678704}
   - component: {fileID: 1361678706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (43)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -6769,7 +6816,7 @@ GameObject:
   - component: {fileID: 1413523280}
   - component: {fileID: 1413523282}
   - component: {fileID: 1413523281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (32)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -6899,7 +6946,7 @@ GameObject:
   - component: {fileID: 1438727067}
   - component: {fileID: 1438727069}
   - component: {fileID: 1438727068}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (10)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -7028,7 +7075,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1439206677}
   - component: {fileID: 1439206679}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (7)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -7112,7 +7159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445950152}
   - component: {fileID: 1445950154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (46)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -7196,7 +7243,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1464982100}
   - component: {fileID: 1464982102}
-  m_Layer: 0
+  - component: {fileID: 1464982103}
+  m_Layer: 6
   m_Name: Spike (41)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -7270,6 +7318,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1464982103
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464982099}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.3569984, y: -0.27004886}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.713997, y: 0.4599023}
+  m_EdgeRadius: 0
 --- !u!1 &1474300244
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,7 +7374,7 @@ GameObject:
   - component: {fileID: 1474300245}
   - component: {fileID: 1474300247}
   - component: {fileID: 1474300246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (26)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -7523,7 +7616,7 @@ GameObject:
   - component: {fileID: 1513409138}
   - component: {fileID: 1513409140}
   - component: {fileID: 1513409139}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (12)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -7733,7 +7826,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1532688977}
   - component: {fileID: 1532688979}
-  m_Layer: 0
+  - component: {fileID: 1532688980}
+  m_Layer: 6
   m_Name: Spike (42)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -7807,46 +7901,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1546967576
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1546967577}
-  - component: {fileID: 1546967579}
-  - component: {fileID: 1546967578}
-  m_Layer: 0
-  m_Name: Spike (47)
-  m_TagString: Trap_Spike
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1546967577
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546967576}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 96.265, y: -4.5200005, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1397879769}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1546967578
+--- !u!61 &1532688980
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546967576}
+  m_GameObject: {fileID: 1532688976}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -7872,7 +7933,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.3582458, y: -0.25664395}
+  m_Offset: {x: 1.3502464, y: -0.2835517}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7883,8 +7944,40 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.7164917, y: 0.4867121}
+  m_Size: {x: 3.7004929, y: 0.4328966}
   m_EdgeRadius: 0
+--- !u!1 &1546967576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1546967577}
+  - component: {fileID: 1546967579}
+  m_Layer: 6
+  m_Name: Spike (47)
+  m_TagString: Trap_Spike
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1546967577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546967576}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 96.265, y: -4.5200005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1397879769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1546967579
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8082,7 +8175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592707316}
   - component: {fileID: 1592707318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (36)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -8167,7 +8260,7 @@ GameObject:
   - component: {fileID: 1596901575}
   - component: {fileID: 1596901577}
   - component: {fileID: 1596901576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (9)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -60954,7 +61047,7 @@ GameObject:
   - component: {fileID: 1711015583}
   - component: {fileID: 1711015585}
   - component: {fileID: 1711015584}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (29)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -61083,8 +61176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1719877894}
   - component: {fileID: 1719877896}
-  - component: {fileID: 1719877895}
-  m_Layer: 0
+  - component: {fileID: 1719877897}
+  m_Layer: 6
   m_Name: Spike (52)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -61106,51 +61199,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1397879769}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1719877895
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719877893}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.7893982, y: -0.25664395}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9.792343, y: 0.4867121}
-  m_EdgeRadius: 0
 --- !u!212 &1719877896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61203,6 +61251,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1719877897
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719877893}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.2827301, y: -0.2768004}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.5654602, y: 0.4463992}
+  m_EdgeRadius: 0
 --- !u!1 &1777938904
 GameObject:
   m_ObjectHideFlags: 0
@@ -61213,7 +61306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777938905}
   - component: {fileID: 1777938907}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (17)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -61567,7 +61660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1815898788}
   - component: {fileID: 1815898790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (56)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -61818,7 +61911,7 @@ GameObject:
   - component: {fileID: 1887164743}
   - component: {fileID: 1887164745}
   - component: {fileID: 1887164744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (37)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -61947,7 +62040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896728224}
   - component: {fileID: 1896728226}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (50)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -62031,7 +62124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896883676}
   - component: {fileID: 1896883678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (14)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -62146,7 +62239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934454736}
   - component: {fileID: 1934454738}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (44)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -62365,7 +62458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1958798960}
   - component: {fileID: 1958798962}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (54)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -62450,7 +62543,7 @@ GameObject:
   - component: {fileID: 1959626047}
   - component: {fileID: 1959626049}
   - component: {fileID: 1959626048}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (30)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -62580,7 +62673,7 @@ GameObject:
   - component: {fileID: 1967103906}
   - component: {fileID: 1967103908}
   - component: {fileID: 1967103907}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (18)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -62764,7 +62857,7 @@ GameObject:
   - component: {fileID: 1993341639}
   - component: {fileID: 1993341641}
   - component: {fileID: 1993341640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -83789,7 +83882,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 5.3617263
+      m_AnimationSpeed: 9.327635
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -85626,7 +85719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998625106}
   - component: {fileID: 1998625108}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (35)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -85778,7 +85871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2017889673}
   - component: {fileID: 2017889675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (28)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -85863,7 +85956,7 @@ GameObject:
   - component: {fileID: 2030082432}
   - component: {fileID: 2030082434}
   - component: {fileID: 2030082433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (5)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -86262,7 +86355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057903364}
   - component: {fileID: 2057903366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (33)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -86346,7 +86439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2096228769}
   - component: {fileID: 2096228771}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (27)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -86431,7 +86524,7 @@ GameObject:
   - component: {fileID: 2101296210}
   - component: {fileID: 2101296212}
   - component: {fileID: 2101296211}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (1)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -86560,7 +86653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2106273025}
   - component: {fileID: 2106273027}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike (38)
   m_TagString: Trap_Spike
   m_Icon: {fileID: 0}
@@ -86710,6 +86803,10 @@ PrefabInstance:
     - target: {fileID: 1144192128662098810, guid: a8ed8174353c80e4095f912d95cf9842, type: 3}
       propertyPath: m_Name
       value: Spike
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144192128662098810, guid: a8ed8174353c80e4095f912d95cf9842, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2219030139985636487, guid: a8ed8174353c80e4095f912d95cf9842, type: 3}
       propertyPath: m_SortingOrder

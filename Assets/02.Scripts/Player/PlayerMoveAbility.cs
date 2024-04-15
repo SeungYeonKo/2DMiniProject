@@ -6,6 +6,7 @@ public class PlayerMoveAbility : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     private Animator _animator;
+    
 
     // [ 체력 ]
     public int Health;
@@ -36,12 +37,12 @@ public class PlayerMoveAbility : MonoBehaviour
     {
         // 이동
         moveInput = Input.GetAxis("Horizontal");
-        if(moveInput > 0.01f) // 오른쪽 이동  
+        if (moveInput > 0.01f) // 오른쪽 이동  
         {
             transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
-        }else if(moveInput < -0.01f) // 왼쪽 이동 
+        } else if (moveInput < -0.01f) // 왼쪽 이동 
         {
-            transform.localScale = new Vector3(-1.3f ,1.3f, 1.3f);
+            transform.localScale = new Vector3(-1.3f, 1.3f, 1.3f);
         }
 
         _animator.SetBool("isRunning", Mathf.Abs(moveInput) > 0.01f && isGrounded);
@@ -96,10 +97,12 @@ public class PlayerMoveAbility : MonoBehaviour
             }
         }
     }
+    
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Ground")
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "Trap_Spike")
         {
             isGrounded = true;
         }
@@ -107,6 +110,7 @@ public class PlayerMoveAbility : MonoBehaviour
         {
             Debug.Log("체력 -1");
             Health -= 1;
+            FindObjectOfType<UI_PlayerStat>().UpdateHealthDisplay();
         }
         if(collision.collider.tag == "Item")
         {

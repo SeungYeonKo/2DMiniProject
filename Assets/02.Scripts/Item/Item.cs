@@ -5,7 +5,8 @@ using UnityEngine;
 public enum ItemType
 {
     Health,
-    Attack
+    Attack,
+    Key
 }
 
 public class Item:MonoBehaviour

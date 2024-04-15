@@ -11,6 +11,8 @@ public class UI_PlayerStat : MonoBehaviour
     public Text AttackItemTextUI;
     public Text KeyItemTextUI;
 
+
+    // 하트이미지
     void Update()
     {
         UpdateHealthDisplay();
@@ -26,5 +28,11 @@ public class UI_PlayerStat : MonoBehaviour
                 HeartImages[i].enabled = i < playerMoveAbility.Health;
             }
         }
+    }
+
+    public void Refresh()
+    {
+        AttackItemTextUI.text = $"{ItemManager.Instance.GetItemCount(ItemType.Attack)}";
+        KeyItemTextUI.text = $"{ItemManager.Instance.GetItemCount(ItemType.Key)}";
     }
 }
