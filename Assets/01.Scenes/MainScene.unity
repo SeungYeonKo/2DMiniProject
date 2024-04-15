@@ -3247,8 +3247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: -8}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: -40, y: 2}
+  m_SizeDelta: {x: 110, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &607133626
 MonoBehaviour:
@@ -3271,19 +3271,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 31f242d918551014d8134c0d967cca33, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: f980fa253b8b52c4c919648727902ff8, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1 / 2
+  m_Text: 1/2
 --- !u!222 &607133627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7770,8 +7770,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: -8}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: 100, y: 2}
+  m_SizeDelta: {x: 140, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1520701029
 MonoBehaviour:
@@ -7794,8 +7794,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 31f242d918551014d8134c0d967cca33, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: f980fa253b8b52c4c919648727902ff8, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -83883,7 +83883,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 5.2624307
+      m_AnimationSpeed: 7.1217775
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:

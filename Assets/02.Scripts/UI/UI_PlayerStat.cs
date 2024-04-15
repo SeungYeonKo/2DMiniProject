@@ -7,7 +7,7 @@ public class UI_PlayerStat : MonoBehaviour
 {
     public PlayerMoveAbility playerMoveAbility;
 
-    public Image[] HeartImages; // 하트 이미지 배열로 선언
+    public Image[] HeartImages; 
     public Text AttackItemTextUI;
     public Text KeyItemTextUI;
 
