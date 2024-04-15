@@ -9,7 +9,7 @@ public enum ItemType
     Key
 }
 
-public class Item:MonoBehaviour
+public class Item
 {
     public ItemType ItemType;
     public int Count;

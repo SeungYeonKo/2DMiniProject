@@ -28,11 +28,12 @@ public class UI_PlayerStat : MonoBehaviour
                 HeartImages[i].enabled = i < playerMoveAbility.Health;
             }
         }
+       
     }
 
     public void Refresh()
     {
-        AttackItemTextUI.text = $"{ItemManager.Instance.GetItemCount(ItemType.Attack)}";
-        KeyItemTextUI.text = $"{ItemManager.Instance.GetItemCount(ItemType.Key)}";
+        AttackItemTextUI.text = $"X {ItemManager.Instance.GetItemCount(ItemType.Attack)}";
+        KeyItemTextUI.text = $"{ItemManager.Instance.GetItemCount(ItemType.Key)}/2";
     }
 }

@@ -7,7 +7,7 @@ public class PlayerMoveAbility : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     private Animator _animator;
-
+    Item _item;
 
     // [ 체력 ]
     public int Health;
@@ -121,6 +121,19 @@ public class PlayerMoveAbility : MonoBehaviour
            Destroy(orange); // 오렌지 객체를 파괴
         }
     }
+    public void Heal(int amount)
+    {
+        if (Health < MaxHealth)
+        {
+            Health += amount;
+            if (Health > MaxHealth)
+            {
+                Health = MaxHealth;
+            }
+            FindObjectOfType<UI_PlayerStat>().UpdateHealthDisplay();
+        }
+    }
+
 
     void Die()
     {
@@ -139,10 +152,14 @@ public class PlayerMoveAbility : MonoBehaviour
             Health -= 1;
             FindObjectOfType<UI_PlayerStat>().UpdateHealthDisplay();
         }
-        if(other.gameObject.CompareTag("Item"))
+        if (other.gameObject.CompareTag("Item"))
         {
-           
-                    Destroy(other.gameObject); // 아이템 게임 오브젝트 파괴
+            ItemObject itemObject = other.gameObject.GetComponent<ItemObject>();
+            if (itemObject != null && itemObject.ItemType == ItemType.Health)
+            {
+                Heal(1);  // 체력 아이템인 경우 체력을 1만큼 회복
+                Destroy(other.gameObject);  // 아이템 파괴
+            }
         }
     }
  }
