@@ -400,7 +400,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 580a3e3f4fa19d745ae36fa17ced02e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -534,7 +534,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 580a3e3f4fa19d745ae36fa17ced02e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2432,7 +2432,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 580a3e3f4fa19d745ae36fa17ced02e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2804,7 +2804,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 580a3e3f4fa19d745ae36fa17ced02e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4527,7 +4527,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 580a3e3f4fa19d745ae36fa17ced02e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5716,6 +5716,7 @@ MonoBehaviour:
   FallMultiplier: 2.5
   OrangePrefab: {fileID: 1697976907031307635, guid: 79d02f958e89b47e1a985360edc10060, type: 3}
   AttackItemCount: 0
+  PlayerDieEffect: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
 --- !u!61 &1142970723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8594,7 +8595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1608335240
 Transform:
   m_ObjectHideFlags: 0
@@ -83849,7 +83850,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 7.766877
+      m_AnimationSpeed: 5.4087305
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -86836,6 +86837,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 935937918}
     m_Modifications:
+    - target: {fileID: 2854778002848089746, guid: 1500962e27ea4bc4aa5347f1330aefad, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3311686458271244698, guid: 1500962e27ea4bc4aa5347f1330aefad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 60.31
@@ -86879,6 +86884,10 @@ PrefabInstance:
     - target: {fileID: 5078136581726152368, guid: 1500962e27ea4bc4aa5347f1330aefad, type: 3}
       propertyPath: m_Name
       value: HealthItem_Heart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7126124392751226838, guid: 1500962e27ea4bc4aa5347f1330aefad, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3837209509843149479, guid: 1500962e27ea4bc4aa5347f1330aefad, type: 3}

@@ -147,6 +147,13 @@ public class PlayerMoveAbility : MonoBehaviour
         }
     }
 
+    void Damaged()
+    {
+        _animator.SetTrigger("Hit");
+        Health -= 1;
+    }
+
+
     void Die()
     {
         if (PlayerDieEffect != null) 
@@ -154,10 +161,10 @@ public class PlayerMoveAbility : MonoBehaviour
             GameObject effect = Instantiate(PlayerDieEffect, transform.position, Quaternion.identity);
             Destroy(effect, 1.3f);  
         }
-        StartCoroutine(DeactivateAfterDelay()); 
+        StartCoroutine(DieEffectDelay()); 
     }
 
-    IEnumerator DeactivateAfterDelay()
+    IEnumerator DieEffectDelay()
     {
         yield return new WaitForSeconds(0.1f); 
         this.gameObject.SetActive(false); 
@@ -180,7 +187,7 @@ public class PlayerMoveAbility : MonoBehaviour
         if (other.collider.tag == "Trap_Spike")
         {
             Debug.Log("체력 -1");
-            Health -= 1;
+            Damaged();
             FindObjectOfType<UI_PlayerStat>().UpdateHealthDisplay();
         }
         if (other.gameObject.CompareTag("Item"))
