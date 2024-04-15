@@ -83852,7 +83852,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 7.1385922
+      m_AnimationSpeed: 5.261526
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -85809,13 +85809,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005262228}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0edcfe376c2fc3f43b2965514ec10579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 50
-  AlphaSpeed: 30
+  AlphaSpeed: 10
 --- !u!114 &2005262231
 MonoBehaviour:
   m_ObjectHideFlags: 0

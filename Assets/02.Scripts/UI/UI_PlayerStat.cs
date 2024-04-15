@@ -32,7 +32,7 @@ public class UI_PlayerStat : MonoBehaviour
         {
             AttackItemTextUI.text = $"X {playerMoveAbility.AttackItemCount}";  // 공격 아이템 카운트 업데이트
         }
-        if (playerMoveAbility.AttackItemCount <= 0)
+        if (playerMoveAbility.AttackItemCount <= 0 )
         {
             NoOrangeText.gameObject.SetActive(true);
         }

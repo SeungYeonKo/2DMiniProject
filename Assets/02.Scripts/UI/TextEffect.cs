@@ -12,11 +12,13 @@ public class TextEffect : MonoBehaviour
     Text NoOrangeText;
 
     Color alpha;
+    Vector3 originalPosition;   // 원래 위치를 저장할 변수
 
     private void Start()
     {
         NoOrangeText = GetComponent<Text>();
         alpha = NoOrangeText.color;
+        originalPosition = transform.position; // 시작 위치 저장
     }
 
     void Update()
@@ -26,4 +28,11 @@ public class TextEffect : MonoBehaviour
         NoOrangeText.color = alpha;
     }
 
+   void OnDisable()
+    {
+        alpha = NoOrangeText.color;
+        alpha.a = 1f; 
+        NoOrangeText.color = alpha; 
+        transform.position = originalPosition;
+    }
 }

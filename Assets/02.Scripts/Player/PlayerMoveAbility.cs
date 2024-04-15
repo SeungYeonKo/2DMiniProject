@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerMoveAbility : MonoBehaviour
 {
+    UI_PlayerStat uI_PlayerStat;
     private Rigidbody2D _rigidbody;
     private Animator _animator; 
 
@@ -132,6 +133,7 @@ public class PlayerMoveAbility : MonoBehaviour
            Destroy(orange); // 오렌지 객체를 파괴
         }
     }
+
     public void Heal(int amount)
     {
         if (Health < MaxHealth)
