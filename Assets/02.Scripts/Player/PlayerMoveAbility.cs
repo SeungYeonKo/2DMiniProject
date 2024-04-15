@@ -6,7 +6,7 @@ public class PlayerMoveAbility : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     private Animator _animator;
-    
+
 
     // [ 체력 ]
     public int Health;
@@ -53,6 +53,10 @@ public class PlayerMoveAbility : MonoBehaviour
             _isJump = true;
         }
         Attack();
+        if(Health <=  0)
+        {
+            Die();
+        } 
     }
 
     void FixedUpdate()
@@ -97,8 +101,11 @@ public class PlayerMoveAbility : MonoBehaviour
             }
         }
     }
-    
 
+    void Die()
+    {
+            this.gameObject.SetActive(false);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
