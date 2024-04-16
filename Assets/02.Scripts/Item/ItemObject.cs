@@ -29,8 +29,7 @@ public class ItemObject : MonoBehaviour
                 player.Heal(1); 
                 break;
             case ItemType.Attack:
-                player.AddAttackItem();
-                Debug.Log("Attack아이템 한 개 추가");
+                player.AddAttackItem();                
                 break;
             case ItemType.Key:
              

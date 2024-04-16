@@ -9,7 +9,7 @@ public class PlayerMoveAbility : MonoBehaviour
 {
     UI_PlayerStat uI_PlayerStat;
     private Rigidbody2D _rigidbody;
-    private Animator _animator; 
+    private Animator _animator;
 
     // [ 체력 ]
     public int Health;
@@ -50,7 +50,8 @@ public class PlayerMoveAbility : MonoBehaviour
         if (moveInput > 0.01f) // 오른쪽 이동  
         {
             transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
-        } else if (moveInput < -0.01f) // 왼쪽 이동 
+        }
+        else if (moveInput < -0.01f) // 왼쪽 이동 
         {
             transform.localScale = new Vector3(-1.3f, 1.3f, 1.3f);
         }
@@ -63,11 +64,11 @@ public class PlayerMoveAbility : MonoBehaviour
             _isJump = true;
         }
         Attack();
-        if(Health <=  0)
+        if (Health <= 0)
         {
-            
+
             Die();
-        } 
+        }
     }
 
     void FixedUpdate()
@@ -114,7 +115,7 @@ public class PlayerMoveAbility : MonoBehaviour
                     orangeRb.AddForce(launchDirection * launchPower, ForceMode2D.Impulse);
                 }
                 StartCoroutine(OrangeDestroy(orange));
-                AttackItemCount-=1; // 아이템 사용 후 개수 감소
+                AttackItemCount -= 1; // 아이템 사용 후 개수 감소
                 OnAttackItemChanged?.Invoke();
                 //FindObjectOfType<UI_PlayerStat>().UpdateAttackItemCount(); // UI 업데이트   
             }
@@ -130,7 +131,7 @@ public class PlayerMoveAbility : MonoBehaviour
         yield return new WaitForSeconds(3f);
         if (orange != null)
         {
-           Destroy(orange); // 오렌지 객체를 파괴
+            Destroy(orange); // 오렌지 객체를 파괴
         }
     }
 
@@ -156,25 +157,25 @@ public class PlayerMoveAbility : MonoBehaviour
 
     void Die()
     {
-        if (PlayerDieEffect != null) 
+        if (PlayerDieEffect != null)
         {
             GameObject effect = Instantiate(PlayerDieEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 1.3f);  
+            Destroy(effect, 1.3f);
         }
-        StartCoroutine(DieEffectDelay()); 
+        StartCoroutine(DieEffectDelay());
     }
 
     IEnumerator DieEffectDelay()
     {
-        yield return new WaitForSeconds(0.1f); 
-        this.gameObject.SetActive(false); 
+        yield return new WaitForSeconds(0.1f);
+        this.gameObject.SetActive(false);
     }
 
 
 
     public void AddAttackItem()
     {
-        AttackItemCount+=1;
+        AttackItemCount += 1;
         OnAttackItemChanged?.Invoke();
         FindObjectOfType<UI_PlayerStat>().UpdateAttackItemCount();  // UI 업데이트 호출
 
@@ -197,17 +198,17 @@ public class PlayerMoveAbility : MonoBehaviour
             ItemObject itemObject = other.gameObject.GetComponent<ItemObject>();
             if (itemObject != null && itemObject.ItemType == ItemType.Health)
             {
-                Heal(1); 
+                Heal(1);
             }
             if (itemObject != null && itemObject.ItemType == ItemType.Attack)
-            { 
+            {
                 AddAttackItem();
             }
-                Destroy(other.gameObject); 
+            Destroy(other.gameObject);
         }
-        if(other.gameObject.CompareTag("EndPosition"))
+        if (other.gameObject.CompareTag("EndPosition"))
         {
             Debug.Log("Stage1_Clear!!");
         }
     }
- }
+}

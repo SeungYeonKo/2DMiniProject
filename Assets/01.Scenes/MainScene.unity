@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mosterType: 2
+  MosterType: 2
 --- !u!95 &197027795
 Animator:
   serializedVersion: 5
@@ -61497,7 +61497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mosterType: 1
+  MosterType: 1
 --- !u!95 &1730081381
 Animator:
   serializedVersion: 5
@@ -62246,7 +62246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mosterType: 0
+  MosterType: 0
 --- !u!50 &1832287685
 Rigidbody2D:
   serializedVersion: 4
@@ -84434,7 +84434,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 5.552726
+      m_AnimationSpeed: 5.7222204
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -86381,8 +86381,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 6, z: -10}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: 0}
-  m_SizeDelta: {x: 150, y: 60}
+  m_AnchoredPosition: {x: -115, y: 40}
+  m_SizeDelta: {x: 200, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005262230
 MonoBehaviour:
@@ -86435,7 +86435,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: f980fa253b8b52c4c919648727902ff8, type: 3}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

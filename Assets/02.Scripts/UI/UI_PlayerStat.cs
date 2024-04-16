@@ -7,7 +7,7 @@ public class UI_PlayerStat : MonoBehaviour
 {
     public PlayerMoveAbility playerMoveAbility;
 
-    public Image[] HeartImages; 
+    public Image[] HeartImages;
     public Text AttackItemTextUI;
     public Text KeyItemTextUI;
     public Text NoOrangeText;
@@ -32,7 +32,7 @@ public class UI_PlayerStat : MonoBehaviour
         {
             AttackItemTextUI.text = $"X {playerMoveAbility.AttackItemCount}";  // 공격 아이템 카운트 업데이트
         }
-        if (playerMoveAbility.AttackItemCount <= 0 )
+        if (playerMoveAbility.AttackItemCount <= 0)
         {
             NoOrangeText.gameObject.SetActive(true);
         }
