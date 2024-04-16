@@ -116,7 +116,7 @@ public class PlayerMoveAbility : MonoBehaviour
                 StartCoroutine(OrangeDestroy(orange));
                 AttackItemCount-=1; // 아이템 사용 후 개수 감소
                 OnAttackItemChanged?.Invoke();
-                FindObjectOfType<UI_PlayerStat>().UpdateAttackItemCount(); // UI 업데이트   
+                //FindObjectOfType<UI_PlayerStat>().UpdateAttackItemCount(); // UI 업데이트   
             }
             else
             {
