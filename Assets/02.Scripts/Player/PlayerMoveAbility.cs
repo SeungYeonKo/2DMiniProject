@@ -11,6 +11,8 @@ public class PlayerMoveAbility : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Animator _animator;
 
+    public GameObject KeyItemEffect;
+
     // [ 체력 ]
     public int Health;
     public int MaxHealth = 10;
@@ -171,13 +173,11 @@ public class PlayerMoveAbility : MonoBehaviour
     }
 
 
-
     public void AddAttackItem()
     {
         AttackItemCount += 1;
         OnAttackItemChanged?.Invoke();
         FindObjectOfType<UI_PlayerStat>().UpdateAttackItemCount();  // UI 업데이트 호출
-
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -203,6 +203,10 @@ public class PlayerMoveAbility : MonoBehaviour
             if (itemObject != null && itemObject.ItemType == ItemType.Attack)
             {
                 AddAttackItem();
+            }
+            if (itemObject != null && itemObject.ItemType == ItemType.Key)
+            {
+
             }
             Destroy(other.gameObject);
         }

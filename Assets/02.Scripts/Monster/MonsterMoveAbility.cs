@@ -112,6 +112,7 @@ public class MonsterMoveAbility : MonoBehaviour
 
     void ShootCarrot()
     {
+        
         GameObject carrot = Instantiate(CarrotPrefab, transform.position, Quaternion.identity); // 기본 회전 제거
         Rigidbody2D carrotRigidbody = carrot.GetComponent<Rigidbody2D>();
 
@@ -119,29 +120,19 @@ public class MonsterMoveAbility : MonoBehaviour
         {
             Debug.Log("오른쪽발사");
             carrotRigidbody.velocity = new Vector2(8, 0);
-            carrot.transform.rotation = Quaternion.Euler(0, 0, 0); 
+            carrot.transform.rotation = Quaternion.Euler(0, 0, -180); 
         }
         else if (NextMove < 0) 
         {
-            Debug.Log("왼쪽발사");
-            carrotRigidbody.velocity = new Vector2(-80, 0);
-            carrot.transform.rotation = Quaternion.Euler(0, 0, 180); 
+            Debug.Log("왼쪽발사1");
+            carrotRigidbody.velocity = new Vector2(-8, 0);
+            carrot.transform.rotation = Quaternion.Euler(0, 0, -0); 
         }
         else // 가만히 있을 때
         {
-            // 몬스터가 바라보는 방향을 기준으로 발사
-            if (_spriteRenderer.flipX)
-            {
-                Debug.Log("오른쪽발사");
-                carrotRigidbody.velocity = new Vector2(-8, 0);
-                carrot.transform.rotation = Quaternion.Euler(0, 0, 180); 
-            }
-            else
-            {
-                Debug.Log("왼쪽발사");
-                carrotRigidbody.velocity = new Vector2(8, 0);
-                carrot.transform.rotation = Quaternion.Euler(0, 0, 0); // 왼쪽으로 발사
-            }
+            Debug.Log("왼쪽발사2");
+            carrotRigidbody.velocity = new Vector2(-8, 0);
+            carrot.transform.rotation = Quaternion.Euler(0, 0, -0);
         }
     }
 
