@@ -29,7 +29,6 @@ public class MonsterMoveAbility : MonoBehaviour
     public LayerMask PlayerLayer;
     private bool _isPlayerDetected = false;
 
-
     // 체력
     public int Health;
     public int MaxHealth = 5;

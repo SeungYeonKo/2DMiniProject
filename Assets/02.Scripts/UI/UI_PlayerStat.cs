@@ -42,6 +42,8 @@ public class UI_PlayerStat : MonoBehaviour
         }
     }
 
+
+
     public void UpdateHealthDisplay()
     {
         if (playerMoveAbility != null && HeartImages.Length == playerMoveAbility.MaxHealth)
