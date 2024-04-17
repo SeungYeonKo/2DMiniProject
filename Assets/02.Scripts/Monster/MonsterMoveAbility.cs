@@ -13,6 +13,8 @@ public class MonsterMoveAbility : MonoBehaviour
 { 
     public MonsterType MonsterType;
     public GameObject MonsterDieEffect;
+    public GameObject KeyItem;
+
     Rigidbody2D _rigidbody;
     Animator _animator;
     SpriteRenderer _spriteRenderer;
@@ -27,6 +29,7 @@ public class MonsterMoveAbility : MonoBehaviour
     public int Health;
     public int MaxHealth = 5;
 
+    private bool isDead = false;
 
     void Start()
     {
@@ -50,7 +53,7 @@ public class MonsterMoveAbility : MonoBehaviour
                 shootTimer = ShootInterval; // 타이머 초기화
             }
         }
-        if (Health <= 0)
+        if (Health <= 0 && !isDead)
         {
             Die();
         }
@@ -112,17 +115,17 @@ public class MonsterMoveAbility : MonoBehaviour
         GameObject carrot = Instantiate(CarrotPrefab, transform.position, Quaternion.identity); // 기본 회전 제거
         Rigidbody2D carrotRigidbody = carrot.GetComponent<Rigidbody2D>();
 
-        if (NextMove > 0) // 오른쪽을 보고 있을 때
+        if (NextMove > 0) 
         {
             Debug.Log("오른쪽발사");
             carrotRigidbody.velocity = new Vector2(8, 0);
-            carrot.transform.rotation = Quaternion.Euler(0, 0, 0); // 오른쪽으로 발사
+            carrot.transform.rotation = Quaternion.Euler(0, 0, 0); 
         }
-        else if (NextMove < 0) // 왼쪽을 보고 있을 때
+        else if (NextMove < 0) 
         {
             Debug.Log("왼쪽발사");
             carrotRigidbody.velocity = new Vector2(-80, 0);
-            carrot.transform.rotation = Quaternion.Euler(0, 0, 180); // 왼쪽으로 발사
+            carrot.transform.rotation = Quaternion.Euler(0, 0, 180); 
         }
         else // 가만히 있을 때
         {
@@ -131,7 +134,7 @@ public class MonsterMoveAbility : MonoBehaviour
             {
                 Debug.Log("오른쪽발사");
                 carrotRigidbody.velocity = new Vector2(-8, 0);
-                carrot.transform.rotation = Quaternion.Euler(0, 0, 180); // 오른쪽으로 발사
+                carrot.transform.rotation = Quaternion.Euler(0, 0, 180); 
             }
             else
             {
@@ -152,12 +155,23 @@ public class MonsterMoveAbility : MonoBehaviour
 
     void Die()
     {
-        if (MonsterDieEffect != null)
+        if (!isDead)
         {
-            GameObject effect = Instantiate(MonsterDieEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 1.3f);
+            isDead = true;
+
+            if (MonsterDieEffect != null)
+            {
+                GameObject effect = Instantiate(MonsterDieEffect, transform.position, Quaternion.identity);
+                Destroy(effect, 1.3f);
+            }
+
+            if (MonsterType == MonsterType.Monster3)
+            {
+                Debug.Log("키아이템 생성!");
+                Instantiate(KeyItem, transform.position, Quaternion.identity);
+            }
+            StartCoroutine(DieEffectDelay());
         }
-        StartCoroutine(DieEffectDelay());
     }
     IEnumerator DieEffectDelay()
     {

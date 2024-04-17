@@ -32,7 +32,7 @@ public class ItemObject : MonoBehaviour
                 player.AddAttackItem();                
                 break;
             case ItemType.Key:
-             
+
                 break;
         }
     }
