@@ -42,7 +42,13 @@ public class UI_PlayerStat : MonoBehaviour
         }
     }
 
-
+    public void UpdateKeyItemCount()
+    {
+        if (playerMoveAbility != null)
+        {
+            KeyItemTextUI.text = $"{playerMoveAbility.KeyItemCount}/2";
+        }
+    }
 
     public void UpdateHealthDisplay()
     {

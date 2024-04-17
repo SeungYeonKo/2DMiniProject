@@ -33,7 +33,10 @@ public class PlayerMoveAbility : MonoBehaviour
 
     // 아이템
     public int AttackItemCount;
+    public int KeyItemCount;
     public event Action OnAttackItemChanged; // 이벤트 추가
+    public event Action OnKeyItemChanged; // 이벤트 추가
+
 
     // 이펙트
     public GameObject PlayerDieEffect;
@@ -129,7 +132,7 @@ public class PlayerMoveAbility : MonoBehaviour
 
     IEnumerator OrangeDestroy(GameObject orange)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.8f);
         if (orange != null)
         {
             Destroy(orange); // 오렌지 객체를 파괴
@@ -180,6 +183,14 @@ public class PlayerMoveAbility : MonoBehaviour
         FindObjectOfType<UI_PlayerStat>().UpdateAttackItemCount();  // UI 업데이트 호출
     }
 
+    public void AddKeyItem()
+    {
+        Debug.Log("키아이템획득!");
+        KeyItemCount += 1;
+        OnKeyItemChanged?.Invoke(); 
+        FindAnyObjectByType<UI_PlayerStat>().UpdateKeyItemCount();
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.tag == "Ground" || other.collider.tag == "Trap_Spike")
@@ -206,7 +217,7 @@ public class PlayerMoveAbility : MonoBehaviour
             }
             if (itemObject != null && itemObject.ItemType == ItemType.Key)
             {
-
+                AddKeyItem();
             }
             Destroy(other.gameObject);
         }
