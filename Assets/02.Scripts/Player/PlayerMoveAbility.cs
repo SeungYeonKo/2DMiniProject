@@ -187,14 +187,7 @@ public class PlayerMoveAbility : MonoBehaviour
         {
             isGrounded = true;
         }
-        if (other.collider.tag == "Trap_Spike")
-        {
-            Debug.Log("체력 -1");
-            Damaged();
-            FindObjectOfType<UI_PlayerStat>().UpdateHealthDisplay();
-        }
-
-        if(other.collider.tag == "Monster")
+        if (other.collider.tag == "Trap_Spike" || other.collider.tag == "Monster" || other.collider.tag == "Carrot")
         {
             Debug.Log("체력 -1");
             Damaged();
@@ -214,10 +207,5 @@ public class PlayerMoveAbility : MonoBehaviour
             }
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("EndPosition"))
-        {
-            Debug.Log("Stage1_Clear!!");
-        }
-
     }
 }
