@@ -66,7 +66,6 @@ public class PlayerMoveAbility : MonoBehaviour
         Attack();
         if (Health <= 0)
         {
-
             Die();
         }
     }

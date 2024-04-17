@@ -12,6 +12,7 @@ public enum MonsterType
 public class MonsterMoveAbility : MonoBehaviour
 { 
     public MonsterType MonsterType;
+    public GameObject MonsterDieEffect;
     Rigidbody2D _rigidbody;
     Animator _animator;
     SpriteRenderer _spriteRenderer;
@@ -19,7 +20,7 @@ public class MonsterMoveAbility : MonoBehaviour
 
     // 당근 공격!!
     public GameObject CarrotPrefab;
-    public float ShootInterval = 2f; // 2초 간격으로 발사
+    public float ShootInterval = 4f; // 2초 간격으로 발사
     private float shootTimer;
 
     // 체력
@@ -48,6 +49,10 @@ public class MonsterMoveAbility : MonoBehaviour
                 ShootCarrot();
                 shootTimer = ShootInterval; // 타이머 초기화
             }
+        }
+        if (Health <= 0)
+        {
+            Die();
         }
     }
 
@@ -90,16 +95,52 @@ public class MonsterMoveAbility : MonoBehaviour
         {
             FlipX();
         }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            return; 
+        }
+        if (collision.gameObject.CompareTag("AttackOrange")) 
+        {
+            Debug.Log("오렌지에 맞았다 -5");
+            Health -= 5;
+            Destroy(collision.gameObject);  // 몬스터와 부딪히면 오렌지 삭제
+        }
     }
 
     void ShootCarrot()
     {
-        GameObject carrot = Instantiate(CarrotPrefab, transform.position, Quaternion.Euler(0, 0, -90));
+        GameObject carrot = Instantiate(CarrotPrefab, transform.position, Quaternion.identity); // 기본 회전 제거
         Rigidbody2D carrotRigidbody = carrot.GetComponent<Rigidbody2D>();
-        int direction = _spriteRenderer.flipX ? 1 : -1; // 현재 몬스터의 방향에 따라 당근 발사 방향 결정
-        carrotRigidbody.velocity = new Vector2(direction * 3, 0); // 당근 발사 속도 및 방향 설정
-    }
 
+        if (NextMove > 0) // 오른쪽을 보고 있을 때
+        {
+            Debug.Log("오른쪽발사");
+            carrotRigidbody.velocity = new Vector2(8, 0);
+            carrot.transform.rotation = Quaternion.Euler(0, 0, 0); // 오른쪽으로 발사
+        }
+        else if (NextMove < 0) // 왼쪽을 보고 있을 때
+        {
+            Debug.Log("왼쪽발사");
+            carrotRigidbody.velocity = new Vector2(-80, 0);
+            carrot.transform.rotation = Quaternion.Euler(0, 0, 180); // 왼쪽으로 발사
+        }
+        else // 가만히 있을 때
+        {
+            // 몬스터가 바라보는 방향을 기준으로 발사
+            if (_spriteRenderer.flipX)
+            {
+                Debug.Log("오른쪽발사");
+                carrotRigidbody.velocity = new Vector2(-8, 0);
+                carrot.transform.rotation = Quaternion.Euler(0, 0, 180); // 오른쪽으로 발사
+            }
+            else
+            {
+                Debug.Log("왼쪽발사");
+                carrotRigidbody.velocity = new Vector2(8, 0);
+                carrot.transform.rotation = Quaternion.Euler(0, 0, 0); // 왼쪽으로 발사
+            }
+        }
+    }
 
     void FlipX()    // 애니메이션 방향 바꿈
     {
@@ -107,5 +148,20 @@ public class MonsterMoveAbility : MonoBehaviour
         _spriteRenderer.flipX = NextMove == 1;
         CancelInvoke();         // 현재 작동 중인 모든 Invoke함수를 멈추는 함수
         Invoke("Think", 5);
+    }
+
+    void Die()
+    {
+        if (MonsterDieEffect != null)
+        {
+            GameObject effect = Instantiate(MonsterDieEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1.3f);
+        }
+        StartCoroutine(DieEffectDelay());
+    }
+    IEnumerator DieEffectDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        this.gameObject.SetActive(false);
     }
 }

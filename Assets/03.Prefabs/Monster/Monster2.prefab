@@ -121,8 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 1
+  MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
+  CarrotPrefab: {fileID: 5221508468759050809, guid: 84d2515c1c66b614b84cb3994c03c7e8, type: 3}
+  ShootInterval: 2
   Health: 0
   MaxHealth: 5
 --- !u!50 &861149069668287783

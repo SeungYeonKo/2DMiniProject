@@ -11,6 +11,7 @@ TagManager:
   - AttackOrange
   - Monster
   - Carrot
+  - FirePosition
   layers:
   - Default
   - TransparentFX

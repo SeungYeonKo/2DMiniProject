@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -745,6 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -944,6 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -1631,6 +1634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -2955,6 +2959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -3225,6 +3230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -4125,6 +4131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -5881,6 +5888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -6117,6 +6125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -6349,6 +6358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -7848,6 +7858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -8215,6 +8226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -8998,6 +9010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -11736,6 +11749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -64625,6 +64639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 2
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 5221508468759050809, guid: 84d2515c1c66b614b84cb3994c03c7e8, type: 3}
   ShootInterval: 2
@@ -64829,6 +64844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -65598,6 +65614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -65967,6 +65984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -66300,6 +66318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -66962,6 +66981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -88699,7 +88719,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 9.176631
+      m_AnimationSpeed: 6.2278233
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -90993,6 +91013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -91972,6 +91993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterType: 0
+  MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -92386,6 +92408,10 @@ PrefabInstance:
     - target: {fileID: 956040408162747947, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
       propertyPath: m_Name
       value: Monster3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
+      propertyPath: MonsterType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
       propertyPath: CarrotPrefab
