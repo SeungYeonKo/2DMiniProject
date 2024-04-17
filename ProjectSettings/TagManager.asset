@@ -9,6 +9,7 @@ TagManager:
   - Trap_Spike
   - EndPosition
   - AttackOrange
+  - Monster
   layers:
   - Default
   - TransparentFX
