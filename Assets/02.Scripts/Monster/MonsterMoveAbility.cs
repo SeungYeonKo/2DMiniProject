@@ -24,6 +24,11 @@ public class MonsterMoveAbility : MonoBehaviour
     public GameObject CarrotPrefab;
     public float ShootInterval = 4f; // 2초 간격으로 발사
     private float shootTimer;
+    // 플레이어 감지
+    public float DetectionRadius = 5f;
+    public LayerMask PlayerLayer;
+    private bool _isPlayerDetected = false;
+
 
     // 체력
     public int Health;
@@ -44,10 +49,12 @@ public class MonsterMoveAbility : MonoBehaviour
 
     private void Update()
     {
+        _isPlayerDetected = Physics2D.OverlapCircle(transform.position, DetectionRadius, PlayerLayer);
+
         if (MonsterType == MonsterType.Monster3)
         {
             shootTimer -= Time.deltaTime;
-            if (shootTimer <= 0)
+            if ( _isPlayerDetected && shootTimer <= 0)
             {
                 ShootCarrot();
                 shootTimer = ShootInterval; // 타이머 초기화

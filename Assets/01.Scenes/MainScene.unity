@@ -333,6 +333,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &6088280
@@ -848,6 +852,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &16069440
@@ -1049,6 +1057,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &31635701
@@ -1814,6 +1826,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &177091947
@@ -3140,6 +3156,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &411886562
@@ -3412,6 +3432,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &417732617
@@ -4314,6 +4338,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &538054542
@@ -6134,6 +6162,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &694986485
@@ -6372,6 +6404,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &740509858
@@ -6606,6 +6642,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &824416757
@@ -8210,6 +8250,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &1133232733
@@ -8579,6 +8623,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &1197565590
@@ -9421,6 +9469,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &1323672565
@@ -12161,6 +12213,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &1605409801
@@ -65052,6 +65108,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 5221508468759050809, guid: 84d2515c1c66b614b84cb3994c03c7e8, type: 3}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
   Health: 0
   MaxHealth: 5
 --- !u!95 &1725429340
@@ -65258,6 +65318,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &1772757911
@@ -66029,6 +66093,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &1820688340
@@ -66400,6 +66468,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &1868492681
@@ -66735,6 +66807,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &1877917249
@@ -67399,6 +67475,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &1927948448
@@ -89173,7 +89253,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 5.4629693
+      m_AnimationSpeed: 9.704928
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -91604,6 +91684,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &2025090326
@@ -92585,6 +92669,10 @@ MonoBehaviour:
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!95 &2109357373
@@ -93021,22 +93109,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster3
       objectReference: {fileID: 0}
-    - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
-      propertyPath: KeyItem
-      value: 
-      objectReference: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
-    - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
-      propertyPath: MonsterType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
-      propertyPath: CarrotPrefab
-      value: 
-      objectReference: {fileID: 5221508468759050809, guid: 84d2515c1c66b614b84cb3994c03c7e8, type: 3}
-    - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
-      propertyPath: KeyItemEffectPrefab
-      value: 
-      objectReference: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
     - target: {fileID: 6559712096071336409, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.35
