@@ -17,6 +17,9 @@ public class MonsterMoveAbility : MonoBehaviour
     SpriteRenderer _spriteRenderer;
     public int NextMove;
 
+    public int Health;
+    public int MaxHealth = 5;
+
 
     void Start()
     {
@@ -25,6 +28,8 @@ public class MonsterMoveAbility : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
         Invoke("Think", 5);     // 함수를 5초 뒤에 호출
+
+        Health = MaxHealth;
     }
 
     void FixedUpdate()

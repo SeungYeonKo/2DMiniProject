@@ -327,8 +327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &6088280
 Animator:
   serializedVersion: 5
@@ -740,8 +742,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &16069440
 Animator:
   serializedVersion: 5
@@ -935,8 +939,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &31635701
 Animator:
   serializedVersion: 5
@@ -1640,6 +1646,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 2
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &197027795
 Animator:
   serializedVersion: 5
@@ -2935,6 +2943,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &411886562
 Animator:
   serializedVersion: 5
@@ -3199,8 +3209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &417732617
 Animator:
   serializedVersion: 5
@@ -4095,6 +4107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &538054542
 Animator:
   serializedVersion: 5
@@ -5845,8 +5859,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &694986485
 Animator:
   serializedVersion: 5
@@ -6077,8 +6093,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &740509858
 Animator:
   serializedVersion: 5
@@ -6305,8 +6323,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &824416757
 Animator:
   serializedVersion: 5
@@ -7802,6 +7822,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1133232733
 Animator:
   serializedVersion: 5
@@ -8343,8 +8365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1197565590
 Animator:
   serializedVersion: 5
@@ -9122,8 +9146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1323672565
 Animator:
   serializedVersion: 5
@@ -11858,6 +11884,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1605409801
 Animator:
   serializedVersion: 5
@@ -64743,6 +64771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 2
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1725429340
 Animator:
   serializedVersion: 5
@@ -64849,8 +64879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1730081381
 Animator:
   serializedVersion: 5
@@ -65703,6 +65735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1820688340
 Animator:
   serializedVersion: 5
@@ -65930,6 +65964,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!50 &1832287685
 Rigidbody2D:
   serializedVersion: 4
@@ -66256,8 +66292,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1868492681
 Animator:
   serializedVersion: 5
@@ -66587,6 +66625,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1877917249
 Animator:
   serializedVersion: 5
@@ -67245,6 +67285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &1927948448
 Animator:
   serializedVersion: 5
@@ -88977,7 +89019,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 5.847189
+      m_AnimationSpeed: 9.536443
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -91272,6 +91314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &2025090326
 Animator:
   serializedVersion: 5
@@ -92245,8 +92289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487b7a894b135404eaa3fb6252f96746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterType: 0
+  MonsterType: 1
   NextMove: 0
+  Health: 0
+  MaxHealth: 5
 --- !u!95 &2109357373
 Animator:
   serializedVersion: 5

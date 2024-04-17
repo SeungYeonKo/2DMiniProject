@@ -193,6 +193,14 @@ public class PlayerMoveAbility : MonoBehaviour
             Damaged();
             FindObjectOfType<UI_PlayerStat>().UpdateHealthDisplay();
         }
+
+        if(other.collider.tag == "Monster")
+        {
+            Debug.Log("체력 -1");
+            Damaged();
+            FindObjectOfType<UI_PlayerStat>().UpdateHealthDisplay();
+        }
+
         if (other.gameObject.CompareTag("Item"))
         {
             ItemObject itemObject = other.gameObject.GetComponent<ItemObject>();
@@ -210,5 +218,6 @@ public class PlayerMoveAbility : MonoBehaviour
         {
             Debug.Log("Stage1_Clear!!");
         }
+
     }
 }
