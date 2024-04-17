@@ -12,6 +12,7 @@ public class PlayerMoveAbility : MonoBehaviour
     private Animator _animator;
 
     public GameObject KeyItemEffect;
+    public Text NoOrangeText;
 
     // [ 체력 ]
     public int Health;
@@ -46,6 +47,8 @@ public class PlayerMoveAbility : MonoBehaviour
         Health = MaxHealth;
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
+
+        NoOrangeText.gameObject.SetActive(false); // 초기에는 경고 메시지를 숨김
     }
 
     void Update()
@@ -125,6 +128,7 @@ public class PlayerMoveAbility : MonoBehaviour
             }
             else
             {
+                NoOrangeText.gameObject.SetActive(true);
                 OnAttackItemChanged?.Invoke();
             }
         }
@@ -132,7 +136,7 @@ public class PlayerMoveAbility : MonoBehaviour
 
     IEnumerator OrangeDestroy(GameObject orange)
     {
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1f);
         if (orange != null)
         {
             Destroy(orange); // 오렌지 객체를 파괴

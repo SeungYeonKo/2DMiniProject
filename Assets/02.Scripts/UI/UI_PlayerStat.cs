@@ -10,7 +10,6 @@ public class UI_PlayerStat : MonoBehaviour
     public Image[] HeartImages;
     public Text AttackItemTextUI;
     public Text KeyItemTextUI;
-    public Text NoOrangeText;
 
     // 하트이미지
     void Update()
@@ -22,7 +21,6 @@ public class UI_PlayerStat : MonoBehaviour
         if (playerMoveAbility != null)
         {
             playerMoveAbility.OnAttackItemChanged += UpdateAttackItemCount; // 이벤트 구독
-            NoOrangeText.gameObject.SetActive(false); // 초기에는 경고 메시지를 숨김
         }
     }
 
@@ -31,14 +29,6 @@ public class UI_PlayerStat : MonoBehaviour
         if (playerMoveAbility != null)
         {
             AttackItemTextUI.text = $"X {playerMoveAbility.AttackItemCount}";  // 공격 아이템 카운트 업데이트
-        }
-        if (playerMoveAbility.AttackItemCount <= 0)
-        {
-            NoOrangeText.gameObject.SetActive(true);
-        }
-        else
-        {
-            NoOrangeText.gameObject.SetActive(false);
         }
     }
 

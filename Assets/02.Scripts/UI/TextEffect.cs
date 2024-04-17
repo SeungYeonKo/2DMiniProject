@@ -26,11 +26,15 @@ public class TextEffect : MonoBehaviour
         transform.Translate(new Vector3 (0, MoveSpeed * Time.deltaTime, 0));
         alpha.a = Mathf.Lerp(alpha.a, 0, Time.deltaTime * AlphaSpeed);
         NoOrangeText.color = alpha;
+
+        if(alpha.a <= 0.01f)  // 알파값이 거의 0에 도달했을 때 컴포넌트를 비활성화
+        {
+            gameObject.SetActive(false);
+        }
     }
 
    void OnDisable()
     {
-        alpha = NoOrangeText.color;
         alpha.a = 1f; 
         NoOrangeText.color = alpha; 
         transform.position = originalPosition;
