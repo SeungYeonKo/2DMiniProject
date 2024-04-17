@@ -329,6 +329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -419,7 +421,6 @@ GameObject:
   - component: {fileID: 8458267}
   - component: {fileID: 8458266}
   - component: {fileID: 8458265}
-  - component: {fileID: 8458269}
   m_Layer: 5
   m_Name: WarningText
   m_TagString: Untagged
@@ -434,17 +435,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8458263}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0952793, w: 0.9954506}
   m_LocalPosition: {x: 0, y: 0, z: -0.7893156}
   m_LocalScale: {x: 0.010631938, y: 0.0091781095, z: 0.61817}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1033682988}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.935}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -957.9, y: -538.2}
-  m_SizeDelta: {x: 300, y: 180}
+  m_AnchoredPosition: {x: -958.75, y: -538.82}
+  m_SizeDelta: {x: 600, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8458265
 MonoBehaviour:
@@ -460,7 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 8458266}
   time: 0
-  blinkSpeed: 0.5
+  blinkSpeed: 1
 --- !u!114 &8458266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,7 +495,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBAAC\uC2A4\uD130\uB4E4\uC744\n\n\uBB34\uCC0C\uB974\uC138\uC694!"
+  m_Text: "\uBAAC\uC2A4\uD130\uB97C \uBB34\uCC0C\uB974\uACE0 \n\uD0A4\uB97C \uCC3E\uC544
+    \uD0C8\uCD9C\uD558\uC138\uC694!"
 --- !u!222 &8458267
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -503,33 +505,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8458263}
   m_CullTransparentMesh: 1
---- !u!50 &8458269
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8458263}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &8533231
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +845,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -1070,6 +1047,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -1366,6 +1345,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &131193914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131193915}
+  - component: {fileID: 131193917}
+  - component: {fileID: 131193916}
+  m_Layer: 5
+  m_Name: Notice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &131193915
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131193914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.017568724, y: 0.017568724, z: 0.017568724}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2005118032}
+  m_Father: {fileID: 1033682988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -960.35034, y: -542.49}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &131193916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131193914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c61ccdabc8d626a4ab8cc078efd6728b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &131193917
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131193914}
+  m_CullTransparentMesh: 1
 --- !u!1 &145342024
 GameObject:
   m_ObjectHideFlags: 3
@@ -1758,6 +1813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -3083,6 +3140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -3354,6 +3413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -4255,6 +4316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -5025,7 +5088,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1/2
+  m_Text: 0/2
 --- !u!222 &607133627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6012,6 +6075,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -6249,6 +6314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -6482,6 +6549,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -7387,7 +7456,7 @@ GameObject:
   - component: {fileID: 1033682986}
   - component: {fileID: 1033682985}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: FixedCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7469,6 +7538,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8458264}
+  - {fileID: 131193915}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7542,9 +7612,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016176492, y: 0}
+  m_Offset: {x: 0.01617649, y: 0.005210159}
   serializedVersion: 2
-  m_Radius: 0.25735477
+  m_Radius: 0.27298516
 --- !u!212 &1050703159
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8084,6 +8154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -8452,6 +8524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -9236,6 +9310,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -11975,6 +12051,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -64865,6 +64943,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 2
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 5221508468759050809, guid: 84d2515c1c66b614b84cb3994c03c7e8, type: 3}
   ShootInterval: 2
@@ -65070,6 +65150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -65840,6 +65922,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -66210,6 +66294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -66544,6 +66630,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -67207,6 +67295,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -88974,7 +89064,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 6.3098907
+      m_AnimationSpeed: 5.6794214
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -90921,6 +91011,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2005118031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005118032}
+  - component: {fileID: 2005118034}
+  - component: {fileID: 2005118033}
+  m_Layer: 5
+  m_Name: '?'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2005118032
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005118031}
+  m_LocalRotation: {x: -0, y: -0, z: 0.27539542, w: 0.96133107}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 131193915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 31.971}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.3, y: 9.8}
+  m_SizeDelta: {x: 15, y: 24}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2005118033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005118031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 31f242d918551014d8134c0d967cca33, type: 3}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '?
+
+'
+--- !u!222 &2005118034
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005118031}
+  m_CullTransparentMesh: 1
 --- !u!1 &2005262228
 GameObject:
   m_ObjectHideFlags: 0
@@ -91305,6 +91476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -92285,6 +92458,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+  KeyItemEffectPrefab: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 0}
   ShootInterval: 2
@@ -92363,6 +92538,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &905467148484344273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_Name
+      value: KeyItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916816332485518561, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
 --- !u!1001 &1509477192878214422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92378,6 +92610,18 @@ PrefabInstance:
     - target: {fileID: 390942638643511077, guid: d504ce2ef603dd5479d6049aca11948f, type: 3}
       propertyPath: m_TagString
       value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178277263834576338, guid: d504ce2ef603dd5479d6049aca11948f, type: 3}
+      propertyPath: m_Radius
+      value: 0.29382557
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178277263834576338, guid: d504ce2ef603dd5479d6049aca11948f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.01617649
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178277263834576338, guid: d504ce2ef603dd5479d6049aca11948f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0052103973
       objectReference: {fileID: 0}
     - target: {fileID: 3178277263834576338, guid: d504ce2ef603dd5479d6049aca11948f, type: 3}
       propertyPath: m_IsTrigger
@@ -92438,9 +92682,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 509217756}
     m_Modifications:
     - target: {fileID: 271469040637362325, guid: 1d8e067be71cbf94993b59defda12a43, type: 3}
+      propertyPath: KeyItem
+      value: 
+      objectReference: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+    - target: {fileID: 271469040637362325, guid: 1d8e067be71cbf94993b59defda12a43, type: 3}
       propertyPath: CarrotPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 271469040637362325, guid: 1d8e067be71cbf94993b59defda12a43, type: 3}
+      propertyPath: KeyItemEffectPrefab
+      value: 
+      objectReference: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
     - target: {fileID: 1976541587700003650, guid: 1d8e067be71cbf94993b59defda12a43, type: 3}
       propertyPath: m_Name
       value: Monster1
@@ -92701,13 +92953,21 @@ PrefabInstance:
       value: Monster3
       objectReference: {fileID: 0}
     - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
+      propertyPath: KeyItem
+      value: 
+      objectReference: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+    - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
       propertyPath: MonsterType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
       propertyPath: CarrotPrefab
       value: 
       objectReference: {fileID: 5221508468759050809, guid: 84d2515c1c66b614b84cb3994c03c7e8, type: 3}
+    - target: {fileID: 2312145167349016197, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
+      propertyPath: KeyItemEffectPrefab
+      value: 
+      objectReference: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
     - target: {fileID: 6559712096071336409, guid: 6362ae8d425a28d4ba36145d679b00a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.35
@@ -92766,6 +93026,10 @@ PrefabInstance:
       value: Monster2
       objectReference: {fileID: 0}
     - target: {fileID: 4772116568414065832, guid: 252207efebb866b48a41d47a8d0aad07, type: 3}
+      propertyPath: KeyItem
+      value: 
+      objectReference: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
+    - target: {fileID: 4772116568414065832, guid: 252207efebb866b48a41d47a8d0aad07, type: 3}
       propertyPath: MonsterType
       value: 0
       objectReference: {fileID: 0}
@@ -92773,6 +93037,10 @@ PrefabInstance:
       propertyPath: CarrotPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4772116568414065832, guid: 252207efebb866b48a41d47a8d0aad07, type: 3}
+      propertyPath: KeyItemEffectPrefab
+      value: 
+      objectReference: {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
     - target: {fileID: 7280761923278880187, guid: 252207efebb866b48a41d47a8d0aad07, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.26
@@ -92841,6 +93109,7 @@ SceneRoots:
   - {fileID: 286189701}
   - {fileID: 545415003}
   - {fileID: 1393246971}
+  - {fileID: 1033682988}
   - {fileID: 2015681033}
   - {fileID: 1822005664}
-  - {fileID: 1033682988}
+  - {fileID: 905467148484344273}
