@@ -20,7 +20,10 @@ public class UI_PlayerStat : MonoBehaviour
     {
         if (playerMoveAbility != null)
         {
-            playerMoveAbility.OnAttackItemChanged += UpdateAttackItemCount; // 이벤트 구독
+            playerMoveAbility.OnMaxKeyItemCountChanged += UpdateKeyItemCount; // MaxKeyItemCount 변경 이벤트 구독
+            UpdateKeyItemCount(); // 초기 설정 반영
+            playerMoveAbility.OnAttackItemChanged += UpdateAttackItemCount; // 공격 아이템 변경 이벤트 구독
+            UpdateAttackItemCount(); // 초기 설정 반영
         }
     }
 
@@ -36,7 +39,7 @@ public class UI_PlayerStat : MonoBehaviour
     {
         if (playerMoveAbility != null)
         {
-            KeyItemTextUI.text = $"{playerMoveAbility.KeyItemCount}/2";
+            KeyItemTextUI.text = $"{playerMoveAbility.KeyItemCount}/{playerMoveAbility.MaxKeyItemCount}";
         }
     }
 

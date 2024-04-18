@@ -5,14 +5,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+
 public class PlayerMoveAbility : MonoBehaviour
 {
-    UI_PlayerStat uI_PlayerStat;
+    public CurrentStage CurrentStage;
+
     private Rigidbody2D _rigidbody;
     private Animator _animator;
 
     public GameObject KeyItemEffect;
     public Text NoOrangeText;
+
+    // 이벤트
+    public event Action OnAttackItemChanged; 
+    public event Action OnKeyItemChanged;
+    public event Action OnMaxKeyItemCountChanged;
 
     // [ 체력 ]
     public int Health;
@@ -35,19 +42,28 @@ public class PlayerMoveAbility : MonoBehaviour
     // 아이템
     public int AttackItemCount;
     public int KeyItemCount;
-    public event Action OnAttackItemChanged; // 이벤트 추가
-    public event Action OnKeyItemChanged; // 이벤트 추가
-
+    public int MaxKeyItemCount;
 
     // 이펙트
     public GameObject PlayerDieEffect;
 
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        CurrentStage = GetComponent<CurrentStage>() ?? FindObjectOfType<CurrentStage>();
+        if (CurrentStage == null)
+        {
+            Debug.LogError("StageClear 참조가 설정되지 않았습니다!");
+            return; 
+        }
+
+        SetKeyItemCountBasedOnStage();
+    }
+
     void Start()
     {
         Health = MaxHealth;
-        _animator = GetComponent<Animator>();
-        _rigidbody = GetComponent<Rigidbody2D>();
-
         NoOrangeText.gameObject.SetActive(false); // 초기에는 경고 메시지를 숨김
     }
 
@@ -92,6 +108,7 @@ public class PlayerMoveAbility : MonoBehaviour
             _rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (FallMultiplier - 1) * Time.fixedDeltaTime;
         }
     }
+    
 
     void Move()
     {
@@ -192,6 +209,26 @@ public class PlayerMoveAbility : MonoBehaviour
         KeyItemCount += 1;
         OnKeyItemChanged?.Invoke(); 
         FindAnyObjectByType<UI_PlayerStat>().UpdateKeyItemCount();
+    }
+
+    private void SetKeyItemCountBasedOnStage()
+    {
+        switch (CurrentStage.StageType)
+        {
+            case StageType.Stage1:
+                MaxKeyItemCount = 2;
+                break;
+            case StageType.Stage2:
+                MaxKeyItemCount = 4;
+                break;
+            case StageType.Stage3:
+                MaxKeyItemCount = 6;
+                break;
+            default:
+                MaxKeyItemCount = 2;
+                break;
+        }
+        OnMaxKeyItemCountChanged?.Invoke(); // 이벤트 발생
     }
 
     private void OnCollisionEnter2D(Collision2D other)
