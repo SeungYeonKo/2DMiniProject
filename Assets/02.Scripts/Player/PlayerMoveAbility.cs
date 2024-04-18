@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -192,6 +193,7 @@ public class PlayerMoveAbility : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         this.gameObject.SetActive(false);
+        SceneManager.LoadScene("StartScene");
     }
 
 
