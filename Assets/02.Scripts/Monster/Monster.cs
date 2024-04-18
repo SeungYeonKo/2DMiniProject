@@ -6,7 +6,8 @@ public enum MonsterType
 {
     Monster1,
     Monster2,
-    Monster3
+    Monster3,
+    Monster4,
 }
 
 public class Monster : MonoBehaviour
@@ -24,7 +25,8 @@ public class Monster : MonoBehaviour
     public GameObject CarrotPrefab;
     public float ShootInterval = 4f; // 2초 간격으로 발사
     private float shootTimer;
-    // 플레이어 감지
+
+    // 몬스터3 플레이어 감지
     public float DetectionRadius = 5f;
     public LayerMask PlayerLayer;
     private bool _isPlayerDetected = false;
@@ -41,14 +43,15 @@ public class Monster : MonoBehaviour
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
-        Invoke("Think", 5);     // 함수를 5초 뒤에 호출
-        if (MonsterType == MonsterType.Monster3)
+        if (MonsterType == MonsterType.Monster4)
         {
-            Health = 25;  // Only Monster3 starts with a health of 15
+            StartCoroutine(FlyRandomly());
+            Health = MaxHealth;  
         }
         else
         {
-            Health = MaxHealth;
+            Invoke("Think", 5);
+            Health = (MonsterType == MonsterType.Monster3) ? 25 : MaxHealth;
         }
     }
 
@@ -73,18 +76,25 @@ public class Monster : MonoBehaviour
 
     void FixedUpdate()
     {
-        // 기본 이동 
-        _rigidbody.velocity = new Vector2(NextMove, _rigidbody.velocity.y);
-
-        // 지형 체크
-        Vector2 FrontVector = new Vector2(_rigidbody.position.x + NextMove * 0.2f, _rigidbody.position.y);
-        Debug.DrawRay(FrontVector, Vector3.down, new Color(0, 1, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(FrontVector, Vector3.down, 1, LayerMask.GetMask("Ground"));
-        if (rayHit.collider == null)
+        if (MonsterType != MonsterType.Monster4) // 몬스터 4 타입이 아닐 때만 기본 이동 로직 적용
         {
-            FlipX();
+            // 기본 이동
+            _rigidbody.velocity = new Vector2(NextMove, _rigidbody.velocity.y);
+
+            // 지형 체크
+            Vector2 FrontVector = new Vector2(_rigidbody.position.x + NextMove * 0.2f, _rigidbody.position.y);
+            Debug.DrawRay(FrontVector, Vector3.down, new Color(0, 1, 0));
+            RaycastHit2D rayHit = Physics2D.Raycast(FrontVector, Vector3.down, 1, LayerMask.GetMask("Ground"));
+            if (rayHit.collider == null)
+            {
+                FlipX();
+            }
         }
     }
+
+
+
+
 
     // 재귀함수 : 자기 자신을 또 호출하는 함수
     void Think()
@@ -94,8 +104,10 @@ public class Monster : MonoBehaviour
         float NextThinkTime = Random.Range(5f, 7f);
         Invoke("Think", NextThinkTime);
 
-        _animator.SetInteger("MonsterRun", NextMove);
-
+        if (MonsterType != MonsterType.Monster4)
+        {
+            _animator.SetInteger("MonsterRun", NextMove);
+        }
         // Flip Sprite
         if(NextMove != 0)
         {
@@ -103,27 +115,95 @@ public class Monster : MonoBehaviour
         }
     }
 
+    // 몬스터 4
+    IEnumerator FlyRandomly()
+    {
+        while (!isDead)
+        {
+            // 다음 무작위 이동까지의 대기 시간 설정
+            float waitTime = Random.Range(1f, 2f);
+
+            // 완전한 2D 랜덤 방향을 생성
+            Vector2 randomDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+
+            // 이동 설정
+            _rigidbody.velocity = randomDirection.normalized * 5f;
+
+            // 지형 체크 및 방향 전환
+            if (!IsGrounded())
+            {
+                // 방향 반전
+                randomDirection.x = -randomDirection.x;
+                _rigidbody.velocity = randomDirection.normalized * 5f;
+                _spriteRenderer.flipX = randomDirection.x < 0;  // 방향에 따른 sprite 뒤집기
+            }
+
+            // 지정된 시간 동안 현재 속도로 이동
+            yield return new WaitForSeconds(waitTime);
+        }
+    }
+
+    bool IsGrounded()
+    {
+        Vector2 position = transform.position;
+        Vector2 direction = Vector2.down;
+        float distance = 1.0f;
+
+        RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, LayerMask.GetMask("Ground"));
+        if (hit.collider != null)
+        {
+            return true;
+        }
+        return false;
+    }
+
+
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Trap_Spike")
             || collision.gameObject.CompareTag("Monster"))
-        {
-            FlipX();
-        }
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            return; 
-        }
-        if (collision.gameObject.CompareTag("AttackOrange")) 
-        {
-            if(MonsterType == MonsterType.Monster3)
+            if (MonsterType == MonsterType.Monster4)
             {
-                Damaged();
+                ChangeDirectionAndMove();
             }
-            Debug.Log("오렌지에 맞았다 -5");
-            Health -= 5;
-            Destroy(collision.gameObject);  // 몬스터와 부딪히면 오렌지 삭제
-        }
+            else
+            {
+                FlipX();
+            }
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                return; 
+            }
+            if (collision.gameObject.CompareTag("AttackOrange")) 
+            {
+                if(MonsterType == MonsterType.Monster3)
+                {
+                    Damaged();
+                }
+                Debug.Log("오렌지에 맞았다 -5");
+                Health -= 5;
+                Destroy(collision.gameObject);  // 몬스터와 부딪히면 오렌지 삭제
+            }
+    }
+    void ChangeDirectionAndMove()
+    {
+
+        FlipX();
+
+        // 새로운 방향으로 이동 시작
+        Vector2 newDirection = _spriteRenderer.flipX ? Vector2.right : Vector2.left;
+        _rigidbody.velocity = newDirection * 5f;
+    }
+
+
+
+    void FlipX()    // 애니메이션 방향 바꿈
+    {
+        NextMove *= -1;
+        _spriteRenderer.flipX = NextMove == 1;
+        CancelInvoke();         // 현재 작동 중인 모든 Invoke함수를 멈추는 함수
+        Invoke("Think", 5);
     }
 
     void ShootCarrot()
@@ -151,13 +231,7 @@ public class Monster : MonoBehaviour
         }
     }
 
-    void FlipX()    // 애니메이션 방향 바꿈
-    {
-        NextMove *= -1;
-        _spriteRenderer.flipX = NextMove == 1;
-        CancelInvoke();         // 현재 작동 중인 모든 Invoke함수를 멈추는 함수
-        Invoke("Think", 5);
-    }
+
 
     void Damaged()
     {

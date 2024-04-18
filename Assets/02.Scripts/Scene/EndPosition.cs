@@ -19,7 +19,7 @@ public class EndPosition : MonoBehaviour
             {
                 if (ClearEffect != null)
                 {
-                    GameObject effect = Instantiate(ClearEffect, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+                    GameObject effect = Instantiate(ClearEffect, transform.position + new Vector3(0, 2.5f, 0), Quaternion.identity);
                 }
                 // 3초 후 다음 스테이지 로드
                 StartCoroutine(LoadNextStageAfterDelay());
@@ -52,7 +52,7 @@ public class EndPosition : MonoBehaviour
                 SceneManager.LoadScene("Stage2");
                 break;
             case StageType.Stage2:
-                SceneManager.LoadScene("Stage3");
+                SceneManager.LoadScene("EndingScene");
                 break;
         }
     }

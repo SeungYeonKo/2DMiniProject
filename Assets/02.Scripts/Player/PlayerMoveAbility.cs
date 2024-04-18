@@ -232,7 +232,7 @@ public class PlayerMoveAbility : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.collider.tag == "Ground" || other.collider.tag == "Trap_Spike")
+        if (other.collider.CompareTag("Ground") || other.collider.CompareTag("Trap_Spike") || other.collider.CompareTag("Monster"))
         {
             isGrounded = true;
         }
