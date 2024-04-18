@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976541587700003650}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.28, y: -3.48, z: 0}
   m_LocalScale: {x: 2.77, y: 3, z: 2.77}
   m_ConstrainProportionsScale: 0
@@ -123,9 +123,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterType: 0
   MonsterDieEffect: {fileID: 1967835574231978638, guid: 658bc0b4a025d344a99d4e3e2679bcd0, type: 3}
+  KeyItem: {fileID: 1614315096346512064, guid: 2a7818d1980de5b4dbdfbf613155ee9a, type: 3}
   NextMove: 0
   CarrotPrefab: {fileID: 5221508468759050809, guid: 84d2515c1c66b614b84cb3994c03c7e8, type: 3}
   ShootInterval: 2
+  DetectionRadius: 5
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   Health: 0
   MaxHealth: 5
 --- !u!50 &2939544031511212871

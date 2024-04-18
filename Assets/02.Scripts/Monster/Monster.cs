@@ -161,8 +161,8 @@ public class Monster : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Trap_Spike")
-            || collision.gameObject.CompareTag("Monster"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Trap_Spike") || collision.gameObject.CompareTag("Monster"))
+        {
             if (MonsterType == MonsterType.Monster4)
             {
                 ChangeDirectionAndMove();
@@ -173,11 +173,11 @@ public class Monster : MonoBehaviour
             }
             if (collision.gameObject.CompareTag("Player"))
             {
-                return; 
+                return;
             }
-            if (collision.gameObject.CompareTag("AttackOrange")) 
+            if (collision.gameObject.CompareTag("AttackOrange"))
             {
-                if(MonsterType == MonsterType.Monster3)
+                if (MonsterType == MonsterType.Monster3)
                 {
                     Damaged();
                 }
@@ -185,6 +185,7 @@ public class Monster : MonoBehaviour
                 Health -= 5;
                 Destroy(collision.gameObject);  // 몬스터와 부딪히면 오렌지 삭제
             }
+        }
     }
     void ChangeDirectionAndMove()
     {

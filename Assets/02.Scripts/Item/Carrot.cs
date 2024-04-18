@@ -10,5 +10,9 @@ public class Carrot : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.collider.CompareTag("AttackOrange")) 
+        {
+            collision.gameObject.SetActive(false); 
+        }
     }
 }
