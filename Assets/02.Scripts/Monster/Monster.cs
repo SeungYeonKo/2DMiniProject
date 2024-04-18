@@ -171,20 +171,22 @@ public class Monster : MonoBehaviour
             {
                 FlipX();
             }
-            if (collision.gameObject.CompareTag("Player"))
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("AttackOrange"))
+        {
+            if (MonsterType != MonsterType.Monster3)
             {
-                return;
-            }
-            if (collision.gameObject.CompareTag("AttackOrange"))
-            {
-                if (MonsterType == MonsterType.Monster3)
-                {
-                    Damaged();
-                }
                 Debug.Log("오렌지에 맞았다 -5");
                 Health -= 5;
-                Destroy(collision.gameObject);  // 몬스터와 부딪히면 오렌지 삭제
+                Destroy(collision.gameObject);
             }
+            Damaged();
         }
     }
     void ChangeDirectionAndMove()
