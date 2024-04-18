@@ -12,9 +12,9 @@ public class BackGround1 : MonoBehaviour
 
         Vector2 newPosition = transform.position + (Vector3)(dir * Speed) * Time.deltaTime;
 
-        if (newPosition.y < -11.87)
+        if (newPosition.x < -20)
         {
-            newPosition.y = 11.95f;
+            newPosition.x = 20;
         }
         transform.position = newPosition;
     }

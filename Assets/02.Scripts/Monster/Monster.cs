@@ -239,7 +239,7 @@ public class Monster : MonoBehaviour
     void Damaged()
     {
         _animator.SetTrigger("Hit");
-        Health -= 1;
+        Health -= 5;
     }
 
     void Die()
