@@ -82,7 +82,7 @@ public class PlayerMoveAbility : MonoBehaviour
         _animator.SetBool("isRunning", Mathf.Abs(moveInput) > 0.01f && isGrounded);
 
         // 점프 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded || CompareTag("Monster"))
         {
             _isJump = true;
         }
