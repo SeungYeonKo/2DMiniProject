@@ -13,7 +13,6 @@ public class PlayerMoveAbility : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Animator _animator;
 
-    public GameObject KeyItemEffect;
     public Text NoOrangeText;
 
     // 이벤트

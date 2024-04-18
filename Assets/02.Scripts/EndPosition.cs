@@ -1,9 +1,14 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class EndPosition : MonoBehaviour
 {
     public PlayerMoveAbility playerMoveAbility; // PlayerMoveAbility 컴포넌트에 대한 참조
+    public GameObject ClearEffect;
+    public Text NoKeyText;
+
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,14 +17,30 @@ public class EndPosition : MonoBehaviour
             // 키 아이템 수가 충분한지 확인
             if (playerMoveAbility.KeyItemCount >= playerMoveAbility.MaxKeyItemCount)
             {
-                // 다음 스테이지로 이동
-                LoadNextStage();
+                if (ClearEffect != null)
+                {
+                    GameObject effect = Instantiate(ClearEffect, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+                }
+                // 3초 후 다음 스테이지 로드
+                StartCoroutine(LoadNextStageAfterDelay());
             }
             else
             {
-                Debug.Log("키 아이템이 부족합니다!");
+                StartCoroutine(DisplayNoKeyText());
             }
         }
+    }
+    IEnumerator DisplayNoKeyText()
+    {
+        NoKeyText.gameObject.SetActive(true); 
+        yield return new WaitForSeconds(1); 
+        NoKeyText.gameObject.SetActive(false); 
+    }
+
+    IEnumerator LoadNextStageAfterDelay()
+    {
+        yield return new WaitForSeconds(3); // 3초 지연
+        LoadNextStage();
     }
 
     void LoadNextStage()
@@ -32,9 +53,6 @@ public class EndPosition : MonoBehaviour
                 break;
             case StageType.Stage2:
                 SceneManager.LoadScene("Stage3");
-                break;
-            case StageType.Stage3:
-                SceneManager.LoadScene("EndingScene");
                 break;
         }
     }
