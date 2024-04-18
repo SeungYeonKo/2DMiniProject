@@ -162,7 +162,6 @@ public class PlayerMoveAbility : MonoBehaviour
         Health -= 1;
     }
 
-
     void Die()
     {
         if (PlayerDieEffect != null)

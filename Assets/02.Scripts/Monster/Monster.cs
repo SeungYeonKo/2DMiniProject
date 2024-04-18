@@ -9,7 +9,7 @@ public enum MonsterType
     Monster3
 }
 
-public class MonsterMoveAbility : MonoBehaviour
+public class Monster : MonoBehaviour
 { 
     public MonsterType MonsterType;
     public GameObject MonsterDieEffect;
@@ -42,8 +42,14 @@ public class MonsterMoveAbility : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
         Invoke("Think", 5);     // 함수를 5초 뒤에 호출
-
-        Health = MaxHealth;
+        if (MonsterType == MonsterType.Monster3)
+        {
+            Health = 25;  // Only Monster3 starts with a health of 15
+        }
+        else
+        {
+            Health = MaxHealth;
+        }
     }
 
     private void Update()
@@ -110,6 +116,10 @@ public class MonsterMoveAbility : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("AttackOrange")) 
         {
+            if(MonsterType == MonsterType.Monster3)
+            {
+                Damaged();
+            }
             Debug.Log("오렌지에 맞았다 -5");
             Health -= 5;
             Destroy(collision.gameObject);  // 몬스터와 부딪히면 오렌지 삭제
@@ -118,7 +128,6 @@ public class MonsterMoveAbility : MonoBehaviour
 
     void ShootCarrot()
     {
-        
         GameObject carrot = Instantiate(CarrotPrefab, transform.position, Quaternion.identity); // 기본 회전 제거
         Rigidbody2D carrotRigidbody = carrot.GetComponent<Rigidbody2D>();
 
@@ -148,6 +157,12 @@ public class MonsterMoveAbility : MonoBehaviour
         _spriteRenderer.flipX = NextMove == 1;
         CancelInvoke();         // 현재 작동 중인 모든 Invoke함수를 멈추는 함수
         Invoke("Think", 5);
+    }
+
+    void Damaged()
+    {
+        _animator.SetTrigger("Hit");
+        Health -= 1;
     }
 
     void Die()
