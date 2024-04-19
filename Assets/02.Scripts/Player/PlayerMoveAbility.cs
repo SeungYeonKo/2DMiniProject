@@ -294,6 +294,22 @@ public class PlayerMoveAbility : MonoBehaviour
         {
             isGrounded = true;
         }
+        // 플레이어의 양 옆이 벽으로 인식되도록 수정
+        if (other.contacts.Length > 0)
+        {
+            ContactPoint2D contact = other.contacts[0];
+            float angle = Vector2.Angle(contact.normal, Vector2.up);
+
+            // 수평으로 충돌한 경우
+            if (angle == 0)
+            {
+                // 좌우 벽에 충돌한 경우, isGrounded를 false로 설정하여 점프 중인 것으로 처리
+                if (Mathf.Abs(contact.normal.x) > 0.5f)
+                {
+                    isGrounded = false;
+                }
+            }
+        }
         if (other.collider.tag == "Trap_Spike" || other.collider.tag == "Monster" || other.collider.tag == "Carrot")
         {
             Debug.Log("체력 -1");
