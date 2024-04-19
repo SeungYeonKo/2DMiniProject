@@ -73,10 +73,10 @@ public class PlayerMoveAbility : MonoBehaviour
         GameObject SoundController4 = GameObject.Find("PlayerAttack");
         GameObject SoundController5 = GameObject.Find("PlayerEatHealthItem");
         PlayerDeath = SoundController.GetComponent<AudioSource>();
-        PlayerDeath = SoundController2.GetComponent<AudioSource>();
-        PlayerDeath = SoundController3.GetComponent<AudioSource>();
-        PlayerDeath = SoundController4.GetComponent<AudioSource>();
-        PlayerDeath = SoundController5.GetComponent<AudioSource>();
+        PlayerJump = SoundController2.GetComponent<AudioSource>();
+        PlayerMinusHealth = SoundController3.GetComponent<AudioSource>();
+        PlayerAttack = SoundController4.GetComponent<AudioSource>();
+        PlayerEatHealthItem = SoundController5.GetComponent<AudioSource>();
         
  
 
@@ -126,6 +126,13 @@ public class PlayerMoveAbility : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             Die();
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            KeyItemCount = MaxKeyItemCount;
+            OnKeyItemChanged?.Invoke();
+            FindAnyObjectByType<UI_PlayerStat>().UpdateKeyItemCount();
         }
     }
 
@@ -229,6 +236,7 @@ public class PlayerMoveAbility : MonoBehaviour
                 Destroy(effect, 1.3f);
             }
             PlayerDeath.Play();
+            Debug.Log("플레이어죽음사운드");
             StartCoroutine(DieEffectDelay());
         }
     }

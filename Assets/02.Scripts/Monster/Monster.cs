@@ -37,6 +37,15 @@ public class Monster : MonoBehaviour
 
     private bool isDead = false;
 
+    // 사운드
+    public AudioSource MonsterCarrotAttack;
+
+    private void Awake()
+    {
+        GameObject SoundController = GameObject.Find("MonsterCarrotAttack");
+        MonsterCarrotAttack = SoundController.GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -211,6 +220,7 @@ public class Monster : MonoBehaviour
 
     void ShootCarrot()
     {
+        MonsterCarrotAttack.Play();
         GameObject carrot = Instantiate(CarrotPrefab, transform.position, Quaternion.identity); // 기본 회전 제거
         Rigidbody2D carrotRigidbody = carrot.GetComponent<Rigidbody2D>();
 

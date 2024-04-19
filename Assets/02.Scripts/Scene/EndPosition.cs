@@ -8,7 +8,13 @@ public class EndPosition : MonoBehaviour
     public PlayerMoveAbility playerMoveAbility; // PlayerMoveAbility 컴포넌트에 대한 참조
     public GameObject ClearEffect;
     public Text NoKeyText;
+    public AudioSource StageClear;
 
+    private void Awake()
+    {
+        GameObject SoundController = GameObject.Find("StageClear");
+        StageClear = SoundController.GetComponent<AudioSource>();
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,6 +27,7 @@ public class EndPosition : MonoBehaviour
                 {
                     GameObject effect = Instantiate(ClearEffect, transform.position + new Vector3(0, 2.5f, 0), Quaternion.identity);
                 }
+                StageClear.Play();
                 // 3초 후 다음 스테이지 로드
                 StartCoroutine(LoadNextStageAfterDelay());
             }
