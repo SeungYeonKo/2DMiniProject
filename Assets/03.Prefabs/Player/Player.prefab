@@ -172,7 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cf2587eb8b3724a8bb240c9f0e98c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeyItemEffect: {fileID: 0}
+  CurrentStage: {fileID: 0}
+  NoOrangeText: {fileID: 0}
   Health: 0
   MaxHealth: 10
   Movespeed: 3.5
@@ -180,7 +181,15 @@ MonoBehaviour:
   FallMultiplier: 2.5
   OrangePrefab: {fileID: 1697976907031307635, guid: 79d02f958e89b47e1a985360edc10060, type: 3}
   AttackItemCount: 0
+  KeyItemCount: 0
+  MaxKeyItemCount: 0
   PlayerDieEffect: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
+  PlayerDeath: {fileID: 0}
+  PlayerJump: {fileID: 0}
+  PlayerMinusHealth: {fileID: 0}
+  PlayerAttack: {fileID: 0}
+  PlayerEatHealthItem: {fileID: 0}
+  _spriteRenderer: {fileID: 6885693974249651769}
 --- !u!95 &2179601168975501398
 Animator:
   serializedVersion: 5

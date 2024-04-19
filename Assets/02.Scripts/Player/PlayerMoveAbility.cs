@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using Unity.VisualScripting;
@@ -51,8 +52,14 @@ public class PlayerMoveAbility : MonoBehaviour
 
     // 사운드 
     public AudioSource PlayerDeath;
+    public AudioSource PlayerJump;
+    public AudioSource PlayerMinusHealth;
+    public AudioSource PlayerAttack;
+    public AudioSource PlayerEatHealthItem;
 
     private bool _isDie;
+    
+    public SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
@@ -61,7 +68,17 @@ public class PlayerMoveAbility : MonoBehaviour
         CurrentStage = GetComponent<CurrentStage>() ?? FindObjectOfType<CurrentStage>();
 
         GameObject SoundController = GameObject.Find("PlayerDeath");
+        GameObject SoundController2 = GameObject.Find("PlayerJump");
+        GameObject SoundController3 = GameObject.Find("PlayerMinusHealth");
+        GameObject SoundController4 = GameObject.Find("PlayerAttack");
+        GameObject SoundController5 = GameObject.Find("PlayerEatHealthItem");
         PlayerDeath = SoundController.GetComponent<AudioSource>();
+        PlayerDeath = SoundController2.GetComponent<AudioSource>();
+        PlayerDeath = SoundController3.GetComponent<AudioSource>();
+        PlayerDeath = SoundController4.GetComponent<AudioSource>();
+        PlayerDeath = SoundController5.GetComponent<AudioSource>();
+        
+ 
 
         if (CurrentStage == null)
         {
@@ -98,9 +115,15 @@ public class PlayerMoveAbility : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded || CompareTag("Monster"))
         {
             _isJump = true;
+            PlayerJump.Play();
         }
         Attack();
         if (Health <= 0)
+        {
+            Die();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
         {
             Die();
         }
@@ -152,6 +175,7 @@ public class PlayerMoveAbility : MonoBehaviour
                     orangeRb.AddForce(launchDirection * launchPower, ForceMode2D.Impulse);
                 }
                 StartCoroutine(OrangeDestroy(orange));
+                PlayerAttack.Play();
                 AttackItemCount -= 1; // 아이템 사용 후 개수 감소
                 OnAttackItemChanged?.Invoke();
                 //FindObjectOfType<UI_PlayerStat>().UpdateAttackItemCount(); // UI 업데이트   
@@ -177,6 +201,7 @@ public class PlayerMoveAbility : MonoBehaviour
     {
         if (Health < MaxHealth)
         {
+            PlayerEatHealthItem.Play();
             Health += amount;
             if (Health > MaxHealth)
             {
@@ -189,6 +214,7 @@ public class PlayerMoveAbility : MonoBehaviour
     void Damaged()
     {
         _animator.SetTrigger("Hit");
+        PlayerMinusHealth.Play();
         Health -= 1;
     }
 
@@ -209,12 +235,13 @@ public class PlayerMoveAbility : MonoBehaviour
 
     IEnumerator DieEffectDelay()
     {
-        this.gameObject.SetActive(false);  // 게임 오브젝트 비활성화
-        yield return new WaitForSeconds(PlayerDeath.clip.length);  // 사망 사운드 길이만큼 대기
-        
+        Color newColor = _spriteRenderer.color;
+        newColor.a = 0f;
+        _spriteRenderer.color = newColor;
+
+        yield return new WaitForSeconds(1f);  // 사망 사운드 길이만큼 대기
+
         SceneManager.LoadScene("StartScene");  // 씬 로드
-        
-        
     }
 
 

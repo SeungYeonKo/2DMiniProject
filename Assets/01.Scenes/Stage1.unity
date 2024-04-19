@@ -139484,7 +139484,7 @@ Tilemap:
       - {fileID: -3698963325330885405, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -7168325035351650290, guid: 27a107940057e8743a507269b18a691a, type: 3}
       - {fileID: -8728669653598591988, guid: 27a107940057e8743a507269b18a691a, type: 3}
-      m_AnimationSpeed: 6.5175095
+      m_AnimationSpeed: 5.374197
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -145952,6 +145952,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 583885728756083429, guid: f7e37528a0e66a747ae05737919a1608, type: 3}
+      propertyPath: PlayerJump
+      value: 
+      objectReference: {fileID: 8509030397079809179}
+    - target: {fileID: 583885728756083429, guid: f7e37528a0e66a747ae05737919a1608, type: 3}
       propertyPath: PlayerDeath
       value: 
       objectReference: {fileID: 6345928502599139336}
@@ -145960,9 +145964,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4904308293141751364}
     - target: {fileID: 583885728756083429, guid: f7e37528a0e66a747ae05737919a1608, type: 3}
-      propertyPath: KeyItemEffect
+      propertyPath: PlayerAttack
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6252297354442663067}
+    - target: {fileID: 583885728756083429, guid: f7e37528a0e66a747ae05737919a1608, type: 3}
+      propertyPath: PlayerMinusHealth
+      value: 
+      objectReference: {fileID: 4163033782435416312}
+    - target: {fileID: 583885728756083429, guid: f7e37528a0e66a747ae05737919a1608, type: 3}
+      propertyPath: PlayerEatHealthItem
+      value: 
+      objectReference: {fileID: 2230229636991428969}
     - target: {fileID: 5923798914911530854, guid: f7e37528a0e66a747ae05737919a1608, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.84
@@ -147719,7 +147731,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0121a659315624d7a96e98abd2d2a16d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
