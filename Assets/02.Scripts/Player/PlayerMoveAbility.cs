@@ -9,7 +9,9 @@ using UnityEngine.UI;
 
 public class PlayerMoveAbility : MonoBehaviour
 {
+    // 참조
     public CurrentStage CurrentStage;
+
 
     private Rigidbody2D _rigidbody;
     private Animator _animator;
@@ -47,11 +49,20 @@ public class PlayerMoveAbility : MonoBehaviour
     // 이펙트
     public GameObject PlayerDieEffect;
 
+    // 사운드 
+    public AudioSource PlayerDeath;
+
+    private bool _isDie;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
         CurrentStage = GetComponent<CurrentStage>() ?? FindObjectOfType<CurrentStage>();
+
+        GameObject SoundController = GameObject.Find("PlayerDeath");
+        PlayerDeath = SoundController.GetComponent<AudioSource>();
+
         if (CurrentStage == null)
         {
             Debug.LogError("StageClear 참조가 설정되지 않았습니다!");
@@ -63,6 +74,7 @@ public class PlayerMoveAbility : MonoBehaviour
 
     void Start()
     {
+        _isDie = false;
         Health = MaxHealth;
         NoOrangeText.gameObject.SetActive(false); // 초기에는 경고 메시지를 숨김
     }
@@ -93,6 +105,7 @@ public class PlayerMoveAbility : MonoBehaviour
             Die();
         }
     }
+
 
     void FixedUpdate()
     {
@@ -181,19 +194,27 @@ public class PlayerMoveAbility : MonoBehaviour
 
     void Die()
     {
-        if (PlayerDieEffect != null)
+        if (!_isDie)
         {
-            GameObject effect = Instantiate(PlayerDieEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 1.3f);
+            _isDie = true;
+            if (PlayerDieEffect != null)
+            {
+                GameObject effect = Instantiate(PlayerDieEffect, transform.position, Quaternion.identity);
+                Destroy(effect, 1.3f);
+            }
+            PlayerDeath.Play();
+            StartCoroutine(DieEffectDelay());
         }
-        StartCoroutine(DieEffectDelay());
     }
 
     IEnumerator DieEffectDelay()
     {
-        yield return new WaitForSeconds(0.1f);
-        this.gameObject.SetActive(false);
-        SceneManager.LoadScene("StartScene");
+        this.gameObject.SetActive(false);  // 게임 오브젝트 비활성화
+        yield return new WaitForSeconds(PlayerDeath.clip.length);  // 사망 사운드 길이만큼 대기
+        
+        SceneManager.LoadScene("StartScene");  // 씬 로드
+        
+        
     }
 
 
