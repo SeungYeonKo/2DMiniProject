@@ -85,7 +85,7 @@ public class Monster : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (MonsterType != MonsterType.Monster4) // 몬스터 4 타입이 아닐 때만 기본 이동 로직 적용
+        if (MonsterType != MonsterType.Monster4) 
         {
             // 기본 이동
             _rigidbody.velocity = new Vector2(NextMove, _rigidbody.velocity.y);
