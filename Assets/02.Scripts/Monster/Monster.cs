@@ -196,6 +196,7 @@ public class Monster : MonoBehaviour
                 Destroy(collision.gameObject);
             }
             Damaged();
+            Destroy(collision.gameObject);
         }
     }
     void ChangeDirectionAndMove()
